@@ -17,6 +17,8 @@ use App\Models\Category;
 
 // Home Page
 Route::get('/', [HomeController::class, 'HomePage']);
+Route::get('/getHomeSlides', [HomeController::class, 'getHomeSlides']);
+
 Route::get('/service', [CategoryController::class, 'ByCategoryPage']);
 Route::get('/by-brand', [BrandController::class, 'ByBrandPage']);
 Route::get('/policy', [PolicyController::class, 'PolicyPage']);
