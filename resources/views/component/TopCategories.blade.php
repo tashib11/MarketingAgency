@@ -3,9 +3,9 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="heading_s4 text-center">
-                    <h2>Top Categories</h2>
+                    <h2 class='blog-title'>Services</h2>
                 </div>
-                <p class="text-center leads">Explore the Categories</p>
+                <p class="text-center leads">Focused on results we seek to raise the level of our customers</p>
             </div>
         </div>
         <div id="TopCategoryItem" class="row align-items-center">
