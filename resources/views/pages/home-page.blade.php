@@ -13,7 +13,7 @@
         (async () => {
             await Category();
             // await Home();
-            // await Services();
+            await loadServices() ;
             $(".preloader").delay(90).fadeOut(100).addClass('loaded');
             await Popular();
             await New();
