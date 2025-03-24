@@ -2678,10 +2678,15 @@ input.text {
 	transform: translateY(-50%);
 	z-index: 1;
 }
+#heroCarousel .carousel-item img {
+    max-height: 400px; /* Adjust as needed */
+    object-fit: cover;
+}
+
 .carousel-item img {
-	position: relative;
-	z-index: -1;
-	width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1 !important;
+
 }
 .carousel-control-next, .carousel-control-prev {
 	background-color: rgba(0,0,0,0.5);
@@ -7259,5 +7264,4 @@ blockquote p:last-child {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 
