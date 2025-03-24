@@ -12,6 +12,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Middleware\TokenAuthenticate;
 use App\Models\Category;
 
@@ -122,7 +123,7 @@ Route::get("/Dashboard/InvoiceList",[InvoiceController::class,'index'])->name('i
 Route::get("/Dashboard/UserList",[UserController::class,'index'])->name('user.list');
 
 
-
+Route::get('/service-list', [ServiceController::class, 'getServices']);
 
 
 

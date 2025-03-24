@@ -3,7 +3,9 @@
     @include('component.MenuBar')
     @include('component.Home')
     {{-- @include('component.HeroSlider') --}}
-    @include('component.TopCategories')
+    @include('component.Services')
+
+
     @include('component.ExclusiveProducts')
     @include('component.TopBrands')
     @include('component.Footer')
@@ -11,7 +13,7 @@
         (async () => {
             await Category();
             // await Home();
-            await TopCategory();
+            // await Services();
             $(".preloader").delay(90).fadeOut(100).addClass('loaded');
             await Popular();
             await New();
