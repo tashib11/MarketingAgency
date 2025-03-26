@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class WebsiteBooking extends Model
 {
     use HasFactory;
-    protected $table = 'websiteBooking';
+    protected $table = 'website_booking';
 
     protected $fillable = [
         'name', 'email', 'contact', 'company',
