@@ -176,7 +176,13 @@
         width: 100%;
     }
 }
+
+#myform {
+    scroll-margin-top: 80px; /* Adjust this value as needed */
+}
+
     </style>
+
 
 <div class="container py-5">
     <div class="row align-items-center">
@@ -186,16 +192,17 @@
                 Web design and development for business is a necessary part of any company’s online presence.
                 By creating an effective and user-friendly website, businesses can draw in more customers and keep them longer.
             </p>
-            <div class="mt-4">
-                <a href="#" class="btn btn-danger btn-lg me-3">Get Quotation</a>
+            <div class="mt-4 d-flex flex-wrap gap-3">
+                <a href="#myform" class="btn btn-danger btn-lg">Get Quotation</a>
                 <a href="#" class="btn btn-dark btn-lg">View Portfolio</a>
             </div>
         </div>
-        <div class="col-lg-6 text-center">
-            <img src="{{ asset('images/webdev-illustration.png') }}" alt="Web Development" class="img-fluid">
+        <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
+            <img src="{{ asset('assets/images/website.png') }}" alt="Web Development" class="img-fluid w-75">
         </div>
     </div>
 </div>
+
 
 <!-- Web Services Section -->
 <div style="background: #f5f5f5;">
@@ -292,7 +299,8 @@
     </div>
 </div>
 
-<div style="background: #f5f5f5; padding: 50px 0;">
+{{-- form --}}
+<div id="myform" style="background: #f5f5f5; padding: 50px 0;">
     <div class="container">
         <h2 class="text-center text-dark fw-bold mb-4">
             Get <span style="color: red;">Quotation</span>

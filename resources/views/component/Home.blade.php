@@ -1,3 +1,53 @@
+<style>
+    .text-box {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: rgba(0, 0, 0, 0.88);
+      color: rgba(255, 255, 255, 0.942);
+      padding: 5px 5px;
+      border-radius: 6px;
+      max-width: 60%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      min-height: auto;
+      height: auto; /* Ensures height only grows based on content */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      opacity: 0;
+      transform: translateY(10px);
+  }
+
+
+      .fade-in {
+          opacity: 1 !important;
+          transform: translateY(0);
+      }
+
+      /* 🔹 Responsive Design */
+      @media (max-width: 992px) { /* Tablet */
+          .text-box {
+              max-width: 90%;
+              right: 10px;
+              top: 10px;
+          }
+      }
+
+      @media (max-width: 768px) { /* Mobile */
+          .text-box {
+              position: relative;
+              width: 100%;
+              text-align: center;
+              top: auto;
+              right: auto;
+              margin-top: -50px;
+              background: rgba(0, 0, 0, 0.88);
+              padding: 15px;
+          }
+      }
+  </style>
+
 <section class="hero-section text-dark" style="background-color: white; padding: 60px 0;">
     <div class="container">
         <div class="row align-items-center">
@@ -36,55 +86,6 @@
     </div>
 </section>
 
-<style>
-  .text-box {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: rgba(0, 0, 0, 0.88);
-    color: rgba(255, 255, 255, 0.942);
-    padding: 5px 5px;
-    border-radius: 6px;
-    max-width: 60%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    min-height: auto;
-    height: auto; /* Ensures height only grows based on content */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    opacity: 0;
-    transform: translateY(10px);
-}
-
-
-    .fade-in {
-        opacity: 1 !important;
-        transform: translateY(0);
-    }
-
-    /* 🔹 Responsive Design */
-    @media (max-width: 992px) { /* Tablet */
-        .text-box {
-            max-width: 90%;
-            right: 10px;
-            top: 10px;
-        }
-    }
-
-    @media (max-width: 768px) { /* Mobile */
-        .text-box {
-            position: relative;
-            width: 100%;
-            text-align: center;
-            top: auto;
-            right: auto;
-            margin-top: -50px;
-            background: rgba(0, 0, 0, 0.88);
-            padding: 15px;
-        }
-    }
-</style>
 
 <script>
 async function loadHomeSlides() {
