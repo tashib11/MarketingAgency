@@ -17,8 +17,8 @@ class WebsiteBookingController extends Controller
             'example_website' => 'nullable|url|max:255',
             'description' => 'required|string',
         ]);
-    
-        website_booking::create([
+
+        WebsiteBooking::create([
             'name' => $request->name,
             'email' => $request->email,
             'contact' => $request->contact,
@@ -28,8 +28,8 @@ class WebsiteBookingController extends Controller
             'description' => $request->description,
             'status' => 'pending'
         ]);
-    
+
         return response()->json(['success' => true, 'message' => 'Form submitted successfully!']);
     }
-    
+
 }
