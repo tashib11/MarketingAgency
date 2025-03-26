@@ -40,21 +40,29 @@
         box-shadow: 0 20px 30px rgba(252, 92, 125, 0.3);
     }
 
-    /* Icon Circle */
-    .icon-circle {
-        background: #E74C3C;
-        padding: 12px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-bottom: 15px;
-        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-    }
+  /* Icon Circle */
+.icon-circle {
+    background: #ffffff; /* Clean white background */
+    padding: 15px;
+    border-radius: 12px; /* Soft rounded edges */
+    display: inline-block;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for better visibility */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
 
-    /* Icon Hover Animation */
-    .service-card-wrapper:hover .icon-circle {
-        transform: scale(1.15) rotate(10deg);
-        background: #FC5C7D;
-    }
+/* Icon Image */
+.icon-circle img {
+    width: 50px; /* Adjust size for better fit */
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Icon Hover Animation */
+.service-card-wrapper:hover .icon-circle {
+    transform: scale(1.1);
+    background: #f5f5f5; /* Subtle grey on hover */
+}
 
     /* Heading & Text Styling */
     .service-card h5 {
@@ -221,7 +229,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('images/laravel-icon.png') }}" alt="Laravel Logo" class="img-fluid">
+                            <img src="{{ asset('assets/images/laravel.svg') }}" alt="Laravel Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Laravel Website</h5>
                         <p class="card-text text-muted">
@@ -237,7 +245,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('images/web-hosting-icon.png') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ asset('assets/images/wordpress.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Wordress Website</h5>
                         <p class="card-text text-muted">

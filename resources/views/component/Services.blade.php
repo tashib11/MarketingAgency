@@ -40,22 +40,29 @@
     box-shadow: 0 20px 30px rgba(252, 92, 125, 0.3);
 }
 
-/* Icon Circle */
-.icon-circle {
-    background: #E74C3C;
-    padding: 12px;
-    border-radius: 50%;
+ /* Icon Circle */
+ .icon-circle {
+    background: #ffffff; /* Clean white background */
+    padding: 15px;
+    border-radius: 12px; /* Soft rounded edges */
     display: inline-block;
     margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for better visibility */
     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Icon Image */
+.icon-circle img {
+    width: 50px; /* Adjust size for better fit */
+    height: 50px;
+    object-fit: contain;
 }
 
 /* Icon Hover Animation */
 .service-card-wrapper:hover .icon-circle {
-    transform: scale(1.15) rotate(10deg);
-    background: #FC5C7D;
+    transform: scale(1.1);
+    background: #f5f5f5; /* Subtle grey on hover */
 }
-
 /* Heading & Text Styling */
 .service-card h5 {
     font-size: 1.2rem;
@@ -82,6 +89,7 @@
 
 </style>
 
+<div style="background: #f5f5f5;">
 <div class="section py-5">
     <div class="container">
         <div class="row justify-content-center">
@@ -95,6 +103,7 @@
             <!-- Dynamic cards will be loaded here -->
         </div>
     </div>
+</div>
 </div>
 
 <script>
@@ -113,7 +122,7 @@
                         <div class="service-card-wrapper">
                             <div class="card service-card p-4">
                                 <div class="icon-circle">
-                                    <img src="${item.logo}" alt="Service Logo" class="img-fluid">
+                                    <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
                                 </div>
                                 <h5 class="card-title text-dark">${item.title}</h5>
                                 <p class="card-text text-muted">${item.description}</p>
