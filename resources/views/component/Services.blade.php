@@ -1,51 +1,85 @@
 
 <style>
-    .service-card-wrapper {
-        position: relative;
-        padding: 5px;
-        border-radius: 12px;
-        background: transparent;
-        transition: all 0.3s ease-in-out;
-    }
+/* ---------- SERVICE CARD STYLING ---------- */
+.service-card-wrapper {
+    position: relative;
+    padding: 5px;
+    border-radius: 12px;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+}
 
-    .service-card {
-        background: #ffffff;
-        border-radius: 10px;
-        text-align: center;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        position: relative;
-        z-index: 1;
-    }
+/* Default Card Style */
+.service-card {
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    min-height: 320px; /* Fixed Height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-    .service-card-wrapper:hover {
-        background: linear-gradient(135deg, #fc5f40, #ff60a7);
-        padding: 5px;
-        border-radius: 12px;
-        transform: translateY(-8px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
+/* Card Hover Effects */
+.service-card-wrapper:hover {
+    background: linear-gradient(135deg, #E74C3C, #FC5C7D);
+    padding: 5px;
+    border-radius: 12px;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(231, 76, 60, 0.3);
+}
 
-    .service-card img {
-        width: 40px;
-    }
+.service-card-wrapper:hover .service-card {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(252, 92, 125, 0.3);
+}
 
-    .icon-circle {
-        background: #fc4c29;
-        padding: 12px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-bottom: 15px;
-    }
+/* Icon Circle */
+.icon-circle {
+    background: #E74C3C;
+    padding: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
 
-    /* Ensure images and text are responsive */
-    .service-card h5 {
-        font-size: 1.2rem;
-    }
+/* Icon Hover Animation */
+.service-card-wrapper:hover .icon-circle {
+    transform: scale(1.15) rotate(10deg);
+    background: #FC5C7D;
+}
 
-    .service-card p {
-        font-size: 0.9rem;
-    }
+/* Heading & Text Styling */
+.service-card h5 {
+    font-size: 1.2rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* ✅ FIXED: Keep description visible */
+.service-card p {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: 150px;
+    color: #666;
+    transition: none; /* 🚀 Fix: No color change on hover */
+}
+
+.service-card-wrapper:hover h5 {
+    color: #ffffff;
+}
+
 </style>
 
 <div class="section py-5">
@@ -64,16 +98,18 @@
 </div>
 
 <script>
-    async function loadServices() {
-        try {
-            let res = await axios.get("/service-list");
+  async function loadServices() {
+    try {
+        let res = await axios.get("/service-list");
+        let serviceContainer = document.getElementById("ServiceContainer");
+        serviceContainer.innerHTML = "";
 
-            let serviceContainer = document.getElementById("ServiceContainer");
-            serviceContainer.innerHTML = "";
+        res.data['data'].forEach((item) => {
+            let serviceUrl = `/serviceById/${item.id}`;
 
-            res.data['data'].forEach((item) => {
-                let serviceCard = `
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            let serviceCard = `
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <a href="${serviceUrl}" class="text-decoration-none">
                         <div class="service-card-wrapper">
                             <div class="card service-card p-4">
                                 <div class="icon-circle">
@@ -83,17 +119,21 @@
                                 <p class="card-text text-muted">${item.description}</p>
                             </div>
                         </div>
-                    </div>`;
+                    </a>
+                </div>`;
 
-                serviceContainer.innerHTML += serviceCard;
-            });
+            serviceContainer.innerHTML += serviceCard;
+        });
 
-        } catch (error) {
-            console.error("Error fetching services:", error);
-        }
+    } catch (error) {
+        console.error("Error fetching services:", error);
     }
+}
 
-    document.addEventListener("DOMContentLoaded", function() {
-        loadServices();
-    });
+// Load services when the page is ready
+document.addEventListener("DOMContentLoaded", function () {
+    loadServices();
+});
+
 </script>
+
