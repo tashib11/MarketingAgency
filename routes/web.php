@@ -30,7 +30,10 @@ Route::get('/verify', [UserController::class, 'VerifyPage']);
 Route::get('/portfolio', [ProductController::class, 'WishList']);
 Route::get('/case-study', [ProductController::class, 'CartListPage']);
 Route::get('/profile', [ProfileController::class, 'ProfilePage']);
+
 Route::get('/blog', [BlogController::class, 'BlogPage']);
+Route::get('/blog/{id}', [BlogController::class, 'getBlog']);
+
 Route::get('/career', [CareerController::class, 'CareerPage']);
 
 // Brand List
