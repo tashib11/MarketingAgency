@@ -1,0 +1,445 @@
+.elementor-kit-5{--e-global-color-primary:#FFFFFF;--e-global-color-secondary:#000000;--e-global-color-text:#7A7A7A;--e-global-color-accent:#EA1D22;--e-global-color-da690d7:#191919;--e-global-color-68d4201:#1F1F1F;--e-global-color-f6017bf:#111111;--e-global-color-735eb43:#0EA412;--e-global-typography-primary-font-family:"Poppins";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Poppins";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Poppins";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Poppins";--e-global-typography-accent-font-weight:500;background-color:var( --e-global-color-secondary );color:var( --e-global-color-text );font-family:"Poppins", Sans-serif;}.elementor-kit-5 button,.elementor-kit-5 input[type="button"],.elementor-kit-5 input[type="submit"],.elementor-kit-5 .elementor-button{background-color:#EA1D2200;font-family:"Poppins", Sans-serif;font-weight:500;text-transform:capitalize;color:var( --e-global-color-primary );border-style:solid;border-width:2px 2px 2px 2px;border-color:var( --e-global-color-accent );border-radius:0px 0px 0px 0px;padding:13px 25px 13px 25px;}.elementor-kit-5 button:hover,.elementor-kit-5 button:focus,.elementor-kit-5 input[type="button"]:hover,.elementor-kit-5 input[type="button"]:focus,.elementor-kit-5 input[type="submit"]:hover,.elementor-kit-5 input[type="submit"]:focus,.elementor-kit-5 .elementor-button:hover,.elementor-kit-5 .elementor-button:focus{background-color:var( --e-global-color-accent );color:var( --e-global-color-primary );}.elementor-kit-5 e-page-transition{background-color:#FFBC7D;}.elementor-kit-5 p{margin-bottom:0px;}.elementor-kit-5 h1{color:var( --e-global-color-primary );}.elementor-kit-5 h2{color:var( --e-global-color-primary );}.elementor-kit-5 h3{color:var( --e-global-color-primary );}.elementor-kit-5 h4{color:var( --e-global-color-primary );}.elementor-kit-5 h5{color:var( --e-global-color-primary );}.elementor-kit-5 h6{color:var( --e-global-color-primary );}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1300px;}.e-con{--container-max-width:1300px;}.elementor-widget:not(:last-child){margin-block-end:20px;}.elementor-element{--widgets-spacing:20px 20px;--widgets-spacing-row:20px;--widgets-spacing-column:20px;}{}h1.entry-title{display:var(--page-title-display);}.site-header .site-branding{flex-direction:column;align-items:stretch;}.site-header{padding-inline-end:0px;padding-inline-start:0px;}.site-footer .site-branding{flex-direction:column;align-items:stretch;}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}/* Start custom CSS */html, body{
+    overflow-x: hidden;
+}
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: var(--e-global-color-accent);
+}
+
+::selection {
+  color: #fff;
+  background: var(--e-global-color-accent);
+}
+
+a {
+	color: #fff;
+}
+
+a:active, a:hover {
+	color: var(--e-global-color-accent);
+}
+
+.rh-content h1, .rh-content h2, .rh-content h3, .rh-content h4, .rh-content h5, .rh-content h6 {
+    text-align: left !important;
+}
+
+.b-border {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.b-border::before {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #ea1d2288;
+    z-index: -1;
+}
+
+.job-header {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.job-header::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 70px;
+    height: 2px;
+    background-color: #ea1d2288;
+    z-index: -1;
+}
+
+/*Button 1*/
+.btn-1 a.elementor-button {
+    border: 2px solid var(--e-global-color-accent) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-1 a.elementor-button:before, .btn-1 a:after {
+  content: '';
+  background: #000 !important;
+  position: absolute;
+  z-index: -1;
+  transition: transform .2s ease-in-out;
+  opacity: .8;
+}
+
+.btn-1 a.elementor-button:before {
+  top: -2px;
+  right: 1em;
+  bottom: 1em;
+  left: -2px;
+  transform-origin: 0 0;
+}
+
+.btn-1 a.elementor-button:after {
+  top: 1em;
+  right: -2px;
+  bottom: -2px;
+  left: 1em;
+  transform-origin: 100% 100%;
+}
+
+.btn-1 a.elementor-button:hover {
+    background: transparent !important;
+}
+
+.btn-1 a.elementor-button:hover:before,
+.btn-1 a.elementor-button:hover:after {
+  transform: scale(0);
+}
+
+/*Button 2*/
+.btn-2 a.elementor-button {
+    border: 2px solid var(--e-global-color-accent) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-2 a.elementor-button:before, .btn-2 a:after {
+  content: '';
+  background: #191919 !important;
+  position: absolute;
+  z-index: -1;
+  transition: transform .2s ease-in-out;
+  opacity: .8;
+}
+
+.btn-2 a.elementor-button:before {
+  top: -2px;
+  right: 1em;
+  bottom: 1em;
+  left: -2px;
+  transform-origin: 0 0;
+}
+
+.btn-2 a.elementor-button:after {
+  top: 1em;
+  right: -2px;
+  bottom: -2px;
+  left: 1em;
+  transform-origin: 100% 100%;
+}
+
+.btn-2 a.elementor-button:hover {
+    background: transparent !important;
+}
+
+.btn-2 a.elementor-button:hover:before,
+.btn-2 a.elementor-button:hover:after {
+  transform: scale(0);
+}
+
+
+.title-1:before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    background-color: transparent;
+    background-image: linear-gradient(355deg, var(--e-global-color-accent ) 0%, var(--e-global-color-accent ) 100%);
+    width: 50px;
+    height: 5px;
+}
+
+.indicator:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: -40px;
+    left: 50%;
+    left: calc(50% - 2.5px);
+    width: 5px;
+    height: 80px;
+    background-color: var(--e-global-color-accent );
+}
+
+.eq-card {
+    transition: 250ms ease-in-out;
+}
+
+.eq-card:hover {
+    margin-top: -10px;
+}
+
+.eq-card, .eq-card .elementor-widget-container, .eq-card .elementor-widget-container a {
+    height: 100%;
+}
+
+.top-right-border:before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    position: absolute;
+    background: var(--e-global-color-accent );
+    top: -10px;
+    right: -10px;
+}
+
+.top-left-border:before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    position: absolute;
+    background: var(--e-global-color-accent );
+    top: -10px;
+    left: -10px;
+}
+
+.bottom-left-border:before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    position: absolute;
+    background: var(--e-global-color-accent );
+    bottom: -10px;
+    left: -10px;
+}
+
+.bottom-right-border:before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    position: absolute;
+    background: var(--e-global-color-accent );
+    bottom: -10px;
+    right: -10px;
+}
+
+.sticky-column {
+position: sticky;
+position: -webkit-sticky;
+top: 8rem;
+}
+
+.team-show {
+    opacity: 1;
+    transition: all 500ms;
+}
+
+.team-hide {
+    opacity: 0;
+    transition: all 500ms;
+}
+
+#wpdcom .wpd-form-head {
+    margin-top: 0;
+}
+
+#wpdcom {
+    padding: 20px;
+}
+
+/* START TOOLTIP STYLES */
+[tooltip] {
+  position: relative; /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: .9em; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip); /* magic! */
+  
+  /* most of the rest of this is opinion */
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  min-width: 19em;
+  max-width: 21em;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: #333;
+  color: #fff;
+  z-index: 1000; /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #333;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333;
+  left: calc(0em - 5px);
+  transform: translate(-.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+
+[tooltip] i {
+    color: var(--e-global-color-accent) !important
+}
+
+.bouncy-icon i {
+-webkit-animation: scrolling 2s ease infinite;
+   -moz-animation: scrolling 2s ease infinite;
+   -o-animation: scrolling 2s  ease infinite;
+   animation: scrolling 2s ease infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translate(0);
+  }
+ 
+  50% {
+    transform: translate(10px,0);
+}
+
+ 
+  100% {
+     transform: translate(0);
+  }
+}
+
+#wpdcom.wpd-layout-3 .wpd-comment .wpd-comment-header {
+    background-color: transparent !important;
+}
+
+#wpdcom .wpd-comment .wpd-reply-to a, #wpdcom .wpd-blog-guest .wpd-comment-author, #wpdcom .wpd-blog-guest .wpd-comment-author a, #wpdcom .wpd-up, #wpdcom .wpd-blog-administrator .wpd-comment-author, #wpdcom .wpd-blog-administrator .wpd-comment-author a {
+	color: #fff !important;
+}
+
+#wpdcom .wpd-comment .wpd-reply-to a:hover,  {
+	color: var(--e-global-color-accent);
+}
+
+#wpdcom.wpd-layout-3 .wpd-blog-guest .wpd-comment-subheader {
+    border-color: var(--e-global-color-text);
+}
+
+#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-administrator .wpd-comment-right, #wpdcom .wpd-thread-head .wpd-thread-info, #wpdcom .wpd-thread-head .wpdiscuz-user-settings {
+    border-color: var(--e-global-color-accent);
+}
+
+#wpdcom .wpd-blog-administrator .wpd-comment-label {
+    background-color: var(--e-global-color-accent);
+}
+
+#wpdcom.wpd-dark.wpd-layout-3 .wpd-comment.wpd-reply .wpd-comment-right {
+    margin-top: 5px;
+}/* End custom CSS */

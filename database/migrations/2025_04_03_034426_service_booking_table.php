@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('website_booking', function (Blueprint $table) {
+        Schema::create('service_booking', function (Blueprint $table) {
             $table->id();
         $table->string('name');
         $table->string('email');
         $table->string('contact');
         $table->string('company');
-        $table->string('website_type');
+        $table->string('service_type');
         $table->string('example_website')->nullable();
-        $table->text('description');
+        $table->text('description')->nullable();
         $table->enum('status', ['pending', 'proceed', 'complete'])->default('pending');
         $table->timestamps();
         });
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('website_booking');
+        //
     }
 };

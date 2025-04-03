@@ -368,7 +368,7 @@
         let email = document.getElementById("email").value.trim();
         let contact = document.getElementById("contact").value.trim();
         let company = document.getElementById("company").value.trim();
-        let websiteType = document.getElementById("websiteType").value.trim();
+        let serviceType = document.getElementById("websiteType").value.trim();
         let exampleWebsite = document.getElementById("exampleWebsite").value.trim();
         let description = document.getElementById("description").value.trim();
         let emailError = document.getElementById("emailError").style.display;
@@ -385,12 +385,12 @@
         }
 
         try {
-            let response = await axios.post('/website-booking', {
+            let response = await axios.post('/service-booking', {
                 name: name,
                 email: email,
                 contact: contact,
                 company: company,
-                website_type: websiteType,
+                service_type: serviceType,
                 example_website: exampleWebsite,
                 description: description
             });
