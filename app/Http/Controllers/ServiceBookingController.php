@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\WebsiteBooking;
+use App\Models\ServiceBooking;
 use Illuminate\Http\Request;
 
-class WebsiteBookingController extends Controller
+class ServiceBookingController extends Controller
 {
     public function store(Request $request)
     {
@@ -13,17 +13,17 @@ class WebsiteBookingController extends Controller
             'email' => 'required|email|max:255',
             'contact' => 'required|string|max:20',
             'company' => 'required|string|max:255',
-            'website_type' => 'required|string|max:255',
+            'service_type' => 'required|string|max:255',
             'example_website' => 'nullable|url|max:255',
             'description' => 'required|string',
         ]);
 
-        WebsiteBooking::create([
+        ServiceBooking::create([
             'name' => $request->name,
             'email' => $request->email,
             'contact' => $request->contact,
             'company' => $request->company,
-            'website_type' => $request->website_type,
+            'service_type' => $request->service_type,
             'example_website' => $request->example_website,
             'description' => $request->description,
             'status' => 'pending'
@@ -31,5 +31,6 @@ class WebsiteBookingController extends Controller
 
         return response()->json(['success' => true, 'message' => 'Form submitted successfully!']);
     }
+
 
 }

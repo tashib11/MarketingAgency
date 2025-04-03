@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
     @include('component.MenuBar')
-    @include('component.Blog')
+    @include('component.DigitalBlog')
     @include('component.Footer')
 
     <script>
