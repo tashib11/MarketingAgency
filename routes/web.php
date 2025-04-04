@@ -12,8 +12,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SeoBookingControler;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceBookingController;
+use App\Http\Controllers\SeoBookingController;
 use App\Http\Middleware\TokenAuthenticate;
 use App\Models\Category;
 
@@ -130,5 +132,6 @@ Route::get("/Dashboard/UserList",[UserController::class,'index'])->name('user.li
 Route::get('/service-list', [ServiceController::class, 'getServices']);
 Route::get('/serviceById/{id}', [ServiceController::class, 'show']);
 Route::post('/service-booking', [ServiceBookingController::class, 'store']);
+Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
 
 

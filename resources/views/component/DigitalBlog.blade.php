@@ -512,11 +512,11 @@
                     <label class="text-dark fw-bold">Service Type</label>
                     <select id="websiteType" class="form-select">
                         <option value="" selected disabled>-- Select Service Type --</option>
-    <option value="Social Media Marketing">Social Media Marketing</option>
-    <option value="Website Design & Development">Website Design & Development</option>
-    <option value="SEO">SEO</option>
-    <option value="Content Solution">Content Solution</option>
-    <option value="Creative Solution">Creative Solution</option>
+                        <option value="Social Media Marketing">Social Media Marketing</option>
+                        <option value="Website Design & Development">Website Design & Development</option>
+                        <option value="SEO">SEO</option>
+                        <option value="Content Solution">Content Solution</option>
+                        <option value="Creative Solution">Creative Solution</option>
                     </select>
                 </div>
                 <div class="col-md-6 col-12 mb-3">
