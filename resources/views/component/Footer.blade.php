@@ -2,71 +2,59 @@
     <div class="footer_top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="widget">
                         <div class="footer_logo">
                             {{-- <a href="#"><img src="assets/images/logo_light.png" alt="logo"/></a> --}}
-                            <h2>TechTrove</h2>
+                            <h2>IDSB</h2>
                         </div>
-                        <p>If you are going to use of Lorem Ipsum need to be sure there isn't hidden of text</p>
-                    </div>
-                    <div class="widget">
+                        Follow:
                         <ul class="social_icons social_white">
                             <li><a href="https://www.facebook.com"><i class="ion-social-facebook"></i></a></li>
-                            <li><a href="https://www.facebook.com"><i class="ion-social-twitter"></i></a></li>
-                            <li><a href="https://www.facebook.com"><i class="ion-social-googleplus"></i></a></li>
+                            {{-- <li><a href="https://www.facebook.com"><i class="ion-social-twitter"></i></a></li> --}}
+                            {{-- <li><a href="https://www.facebook.com"><i class="ion-social-googleplus"></i></a></li> --}}
                             <li><a href="https://www.facebook.com"><i class="ion-social-youtube-outline"></i></a></li>
                             <li><a href="https://www.facebook.com"><i class="ion-social-instagram-outline"></i></a></li>
                         </ul>
                     </div>
+
+
+
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="col-lg-4 col-md-3 col-sm-6">
                     <div class="widget">
                         <h6 class="widget_title">Useful Links</h6>
                         <ul class="widget_links">
                             <li><a href="/policy?type=about">About Us</a></li>
-                            <li><a href="/policy?type=how to buy">How to Buy</a></li>
-                            <li><a href="/policy?type=contact">Contact</a></li>
-                            <li><a href="/policy?type=complain">Complain</a></li>
+                            <li><a href="/consultancy">Get Consultantion</a></li>
+                            <li><a href="/consultancy">Privacy Policy</a></li>
+                            <li><a href="/consultancy">Terms & Condition</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h6 class="widget_title">Legals</h6>
-                        <ul class="widget_links">
-                            <li><a href="/policy?type=refund">Refund Policy</a></li>
-                            <li><a href="/policy?type=terms">Terms & Condition</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6">
-                    <div class="widget">
-                        <h6 class="widget_title">My Account</h6>
-                        <ul class="widget_links">
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Wish List</a></li>
-                            <li><a href="#">Cart List</a></li>
-                            <li><a href="#">Order History</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
+
+
+                <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="widget">
                         <h6 class="widget_title">Contact Info</h6>
                         <ul class="contact_info contact_info_light">
                             <li>
                                 <i class="ti-location-pin"></i>
-                                <p>Teligati, Khulna, BD</p>
+                                <p>Dhanmondi, BD</p>
                             </li>
                             <li>
                                 <i class="ti-email"></i>
-                                <a href="mailto:info@sitename.com">info@TechTrove.com</a>
+                                <a href="mailto:info@sitename.com">info@idsb.com</a>
                             </li>
                             <li>
                                 <i class="ti-mobile"></i>
                                 <p>+ 457 789 789 65</p>
                             </li>
+                            <li>
+                                <i class="fab fa-whatsapp"></i>
+                                <p>+ 457 789 789 65</p>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -77,16 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-md-0 text-center text-md-start">© 2024 All Rights Reserved by TechTrove</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="footer_payment text-center text-lg-end">
-                        <li><a href="#"><img src="assets/images/visa.png" alt="visa"></a></li>
-                        <li><a href="#"><img src="assets/images/discover.png" alt="discover"></a></li>
-                        <li><a href="#"><img src="assets/images/master_card.png" alt="master_card"></a></li>
-                        <li><a href="#"><img src="assets/images/paypal.png" alt="paypal"></a></li>
-                        <li><a href="#"><img src="assets/images/amarican_express.png" alt="amarican_express"></a></li>
-                    </ul>
+                    <p class="mb-md-0 text-center ">© 2025 All Rights Reserved by IDSB</p>
                 </div>
             </div>
         </div>

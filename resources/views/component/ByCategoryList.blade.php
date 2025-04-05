@@ -32,7 +32,7 @@
 
 
 
-        let res=await axios.get(`/ListProductByCategory/${id}`);
+        let res=await axios.get(`/serviceById/${id}`);
         $("#byCategoryList").empty();
         res.data['data'].forEach((item,i)=>{
             let EachItem=`<div class="col-lg-3 col-md-4 col-6">
