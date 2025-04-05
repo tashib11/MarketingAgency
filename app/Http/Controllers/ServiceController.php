@@ -19,6 +19,7 @@ class ServiceController extends Controller
             1 => 'pages.digitalMarket',
             2 => 'pages.webdevelop',
             3 => 'pages.seoOptimization', // Example for future services
+            4 => 'pages.contentSol', // Example for future services
         ];
 
         // Check if the ID exists in the array
