@@ -49,12 +49,12 @@
 </style>
 
 
-
+<div style="background: #f5f5f5;">
 {{-- form --}}
 <div id="myform">
     <div class="container" style="padding: 50px 0">
         <h2 class="text-center text-dark fw-bold mb-4">
-            Get Free <span style="color: red;">Consultation</span>
+            Book A Free <span style="color: red;">Consultancy</span>
         </h2>
 
         <form id="quotationForm" class="quotation-form">
@@ -81,7 +81,7 @@
         </form>
     </div>
 </div>
-
+</div>
 <script>
 
     function validateEmail() {

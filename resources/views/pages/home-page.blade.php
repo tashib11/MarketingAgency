@@ -4,10 +4,11 @@
     @include('component.Home')
     {{-- @include('component.HeroSlider') --}}
     @include('component.Services')
+    @include('component.Benefits')
+    @include('component.HomeConsultancy')
 
 
-    @include('component.ExclusiveProducts')
-    @include('component.TopBrands')
+\
     @include('component.Footer')
     <script>
         (async () => {

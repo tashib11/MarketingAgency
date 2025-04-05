@@ -156,7 +156,7 @@ ul.text-muted li {
                 to engage the target audience, boost online exposure, and encourage conversions.
             </p>
             <div class="mt-4 d-flex flex-wrap gap-3">
-                <a href="#myform" class="btn btn-danger btn-lg">Get Quotation</a>
+                <a href="#myform" class="btn btn-danger btn-lg">Get Order</a>
             </div>
         </div>
 
@@ -345,7 +345,7 @@ ul.text-muted li {
                     </select>
                 </div>
                 <div class="col-md-6 col-12 mb-3">
-                    <label class="text-dark fw-bold">Example Website (Optional)</label>
+                    <label class="text-dark fw-bold">Example (Optional)</label>
                     <input type="text" id="exampleWebsite" class="form-control" placeholder="Example Website Link(Optional)">
                 </div>
                 <div class="col-12 mb-3">

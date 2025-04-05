@@ -42,8 +42,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="nav-link nav_item" href="{{ url('/portfolio') }}">Portfolio</a></li>
-                        <li><a class="nav-link nav_item" href="{{ url('/case-study') }}"> Case Study</a></li>
+                        {{-- <li><a class="nav-link nav_item" href="{{ url('/portfolio') }}">Portfolio</a></li> --}}
+                        {{-- <li><a class="nav-link nav_item" href="{{ url('/case-study') }}"> Case Study</a></li> --}}
                         <li><a class="nav-link nav_item" href="{{ url('/blog') }}">Blog</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown">Get In Touch</a>
@@ -54,7 +54,7 @@
                                         <li><a class="nav-link nav_item" href="{{ url('/policy?type=about') }}"><i class="ti-info-alt"></i> About Us</a></li>
 
                                         <!-- Career -->
-                                        <li><a class="nav-link nav_item" href="{{ url('/career') }}"><i class="ti-briefcase"></i> Career</a></li>
+                                        {{-- <li><a class="nav-link nav_item" href="{{ url('/career') }}"><i class="ti-briefcase"></i> Career</a></li> --}}
 
                                         <!-- Contact Us -->
                                         <li><a class="nav-link nav_item" href="{{ url('/policy?type=contact') }}"><i class="ti-email"></i> Contact Us</a></li>
