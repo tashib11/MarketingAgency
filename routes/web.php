@@ -24,6 +24,8 @@ use App\Models\Category;
 // Home Page
 Route::get('/', [HomeController::class, 'HomePage']);
 Route::get('/getHomeSlides', [HomeController::class, 'getHomeSlides']);
+Route::get('/consultancy', [ConsultancyController::class, 'ConsultPage']);
+
 
 Route::get('/service', [CategoryController::class, 'ByCategoryPage']);
 Route::get('/by-brand', [BrandController::class, 'ByBrandPage']);
@@ -136,7 +138,6 @@ Route::get('/serviceById/{id}', [ServiceController::class, 'show']);
 Route::post('/service-booking', [ServiceBookingController::class, 'store']);
 Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
 Route::post('/free-consultancy', [FreeConsultanyController::class, 'store']);
-Route::get('/consultancy', [ConsultancyController::class, 'ConsultPage']);
 
 
 
