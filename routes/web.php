@@ -12,6 +12,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FreeConsultanyController;
 use App\Http\Controllers\SeoBookingControler;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceBookingController;
@@ -133,5 +134,6 @@ Route::get('/service-list', [ServiceController::class, 'getServices']);
 Route::get('/serviceById/{id}', [ServiceController::class, 'show']);
 Route::post('/service-booking', [ServiceBookingController::class, 'store']);
 Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
+Route::post('/free-consultancy', [FreeConsultanyController::class, 'store']);
 
 
