@@ -62,7 +62,7 @@
                     With our innovative strategies and results-oriented approach, we help businesses thrive in the digital world.
                 </p>
                 <div class="mt-4">
-                    <a href="/policy?type=contact" class="btn btn-danger">Book Free Consultation</a>
+                    <a href="/consultancy" class="btn btn-danger">Book Free Consultation</a>
 
                 </div>
             </div>
