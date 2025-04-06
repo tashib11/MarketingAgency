@@ -26,9 +26,9 @@
                         <h6 class="widget_title">Useful Links</h6>
                         <ul class="widget_links">
                             <li><a href="{{ url('/about-us') }}">About Us</a></li>
-                            <li><a href="/consultancy">Get Consultantion</a></li>
-                            <li><a href="/consultancy">Privacy Policy</a></li>
-                            <li><a href="/consultancy">Terms & Condition</a></li>
+                            <li><a href="{{ url('/consultancy') }}">Get Consultantion</a></li>
+                            <li><a href="{{ url('/consultancy') }}">Privacy Policy</a></li>
+                            <li><a href="{{ url('/consultancy') }}">Terms & Condition</a></li>
                         </ul>
                     </div>
                 </div>
