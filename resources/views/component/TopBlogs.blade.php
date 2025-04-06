@@ -66,48 +66,27 @@ async function TopCategory() {
 
     res.data.forEach((item, i) => {
         let image = "";
-        for (let content of item.contents) {
-            if (content.image_url && content.image_url.trim() !== "") {
-                image = `<img src="${content.image_url}" class="card-img-top" style="height: 180px; object-fit: cover;">`;
-                break;
-            }
-        }
+for (let content of item.contents) {
+    if (content.image_url && content.image_url.trim() !== "") {
+        image = `<img src="${content.image_url}" class="card-img-top" style="height: 180px; object-fit: cover;">`;
+        break;
+    }
+}
 
-        let EachItem = `<div class="p-3 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-                <a href="#" class="text-decoration-none text-dark blog-link" data-id="${item['id']}">
-                    ${image}
-                    <div class="card-body">
-                        <h5 class="card-title text-center fw-semibold" style="font-size: 1.1rem;">${item['title']}</h5>
-                    </div>
-                </a>
+let EachItem = `<div class="p-3 col-sm-6 col-md-4 col-lg-3">
+    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <a href="/blog?page_id=${item['id']}" class="text-decoration-none text-dark">
+            ${image}
+            <div class="card-body">
+                <h5 class="card-title text-center fw-semibold" style="font-size: 1.1rem;">${item['title']}</h5>
             </div>
-        </div>`;
+        </a>
+    </div>
+</div>`;
 
         $("#TopCategoryItem").append(EachItem);
     });
 }
-
-document.addEventListener("click", function (e) {
-    if (e.target.closest(".blog-link")) {
-        e.preventDefault();
-        const blogId = e.target.closest(".blog-link").getAttribute("data-id");
-
-        // Optional: Show loading animation here
-        $(".preloader").removeClass('loaded').show();
-
-        loadBlog(blogId);
-        setActive(blogId);
-
-        // Optional: Update URL without reloading
-        history.pushState(null, '', `/blog?page_id=${blogId}`);
-
-        // Hide the loader after short delay
-        setTimeout(() => {
-            $(".preloader").delay(70).fadeOut(100).addClass('loaded');
-        }, 1000);
-    }
-});
 
 </script>
 

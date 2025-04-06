@@ -8,8 +8,8 @@
         (async () => {
              await Category();
 
-            //  await loadBlog();
-            //  await setActive();
+             await loadBlog();
+             await setActive();
 
             $(".preloader").delay(70).fadeOut(100).addClass('loaded');
 
