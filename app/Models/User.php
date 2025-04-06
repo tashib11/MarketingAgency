@@ -9,8 +9,5 @@ class User extends Model
 {
     protected $fillable = ['email','otp'];
 
-    public function profile(): HasOne
-    {
-        return $this->hasOne(CustomerProfile::class);
-    }
+
 }
