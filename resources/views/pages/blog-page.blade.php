@@ -9,7 +9,7 @@
              await Category();
 
              await loadBlog();
-             await setActive();
+            //  await setActive();
 
             $(".preloader").delay(70).fadeOut(100).addClass('loaded');
 
