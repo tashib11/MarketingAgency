@@ -23,7 +23,7 @@
             <div class="col-lg-4 col-6">
                 <div class="small-box card">
                     <div class="inner">
-                        <h3>{{ $totalInvoices }}</h3>
+                        {{-- <h3>{{ $totalInvoices }}</h3> --}}
                         <p>Total Orders</p>
                     </div>
                     <div class="icon">
@@ -49,7 +49,7 @@
             <div class="col-lg-4 col-6">
                 <div class="small-box card">
                     <div class="inner">
-                        <h3>{{ $totalProducts }}</h3>
+                        {{-- <h3>{{ $totalProducts }}</h3> --}}
                         <p>Total Products</p>
                     </div>
                     <div class="icon">
@@ -62,7 +62,7 @@
             <div class="col-lg-4 col-6">
                 <div class="small-box card">
                     <div class="inner">
-                        <h3>{{ $successfulPayments }}TK</h3>
+                        {{-- <h3>{{ $successfulPayments }}TK</h3> --}}
                         <p>Total Income</p>
                     </div>
                     <div class="icon">

@@ -145,7 +145,7 @@
             <img src="{{ asset('assets/images/SEO2.jpeg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
         <div class="col-lg-6 text-center text-lg-start">
-            <h1 class="fw-bold text-danger">SEO</h1>
+            <h1 class=" blog-title">SEO</h1>
             <p class="text-dark">
                 SEO is an essential facet of digital marketing. It is in charge of raising your website’s exposure and maintaining an advantage over all of your rivals. It raises user traffic, conversion rates, ROI, and website visibility.
                  A website with a high ranking receives more traffic from people than others because Google bases its decisions on logic and the website's rank.

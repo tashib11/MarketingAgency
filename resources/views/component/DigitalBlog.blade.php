@@ -250,7 +250,7 @@
 <div class="container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6 text-center text-lg-start">
-            <h1 class="fw-bold text-danger">Why Your Business Needs Digital Marketing Company to Winning in the Online World</h1>
+            <h1 class="fw-bold text-danger">Why Your Business Needs <span class="blog-title"> Digital Marketing</span> Company to Winning in the Online World</h1>
             <p class="text-dark">
                 Today, being visible online isn't a choice, it's a must-have for any business. Digital marketing helps you:
             </p>

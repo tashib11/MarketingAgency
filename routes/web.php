@@ -36,78 +36,31 @@ Route::get('/blog', [BlogController::class, 'BlogPage']);
 Route::get('/blogList', [BlogController::class, 'BlogList']);
 Route::get('/blog/{id}', [BlogController::class, 'getBlog']);
 
+Route::get('/about-us', [AboutController::class, 'AboutPage']);
+Route::get('/contact', [ContactController::class, 'ContactPage']);
+
 Route::get('/career', [CareerController::class, 'CareerPage']);
-
-// Brand List
-// Category List
-// Product List
-// Slider
-// Product Details
-//policy
-
-
 
 // User Auth
 Route::get('/UserLogin/{UserEmail}', [UserController::class, 'UserLogin']);
 Route::get('/VerifyLogin/{UserEmail}/{OTP}', [UserController::class, 'VerifyLogin']);
 Route::get('/logout',[UserController::class,'UserLogout']);
 
-
-// User Profile
-
-
-// Product Review
-
-
-
-// Product Wish
-
-
-
-// Product Cart
-
-
-
-
-// Invoice and payment
-
-
-//payment
-
 //dashboard
 
 Route::get("/Dashboard",[DashboardController::class,'dashboardPage']);
-Route::get("/Dashboard/ProductCreate",[ProductController::class,'create'])->name('product.create');
-Route::post("/ProductStore",[ProductController::class,'store'])->name('product.store');
-Route::get("/Dashboard/DetailsCreate",[ProductController::class,'detailCreate'])->name('product.detail.create');
-Route::post("/ProductDetailStore",[ProductController::class,'detailstore'])->name('product.detail.store');
-Route::get("/Dashboard/Piechart",[InvoiceController::class,'showPieChart'])->name('product.piechart');
-
-Route::get("/Dashboard/ProductList",[ProductController::class,'index'])->name('product.list');
-
-Route::get("/Dashboard/ProductEdit/{product}",[ProductController::class,'edit'])->name('product.edit');
-Route::post("/Dashboard/ProductUpdate/{product}",[ProductController::class,'update'])->name('product.update');
-Route::get('/Dashboard/ProductDelete/{id}', [ProductController::class, 'destroy'])->name('product.delete');
-
-Route::get("/Dashboard/DetailsSelect",[ProductController::class,'detailSelect'])->name('product.detail.select');
-Route::get("/Dashboard/DetailsEdit/{product}",[ProductController::class,'detailEdit'])->name('product.detail.edit');
-Route::post("/Dashboard/DetailsUpdate/{product}",[ProductController::class,'detailUpdate'])->name('product.detail.update');
-
-
-
-
 Route::get("/Dashboard/UserList",[UserController::class,'index'])->name('user.list');
 
 
 Route::get('/service-list', [ServiceController::class, 'getServices']);
 Route::get('/serviceById/{id}', [ServiceController::class, 'show']);
 Route::post('/service-booking', [ServiceBookingController::class, 'store']);
+
 Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
+
 Route::post('/free-consultancy', [FreeConsultanyController::class, 'store']);
 
 
-Route::get('/about-us', [AboutController::class, 'AboutPage']);
-Route::get('/contact', [ContactController::class, 'ContactPage']);
 
 
 

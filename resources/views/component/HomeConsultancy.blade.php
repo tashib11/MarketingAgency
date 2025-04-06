@@ -54,7 +54,7 @@
 <div id="myform">
     <div class="container" style="padding: 50px 0">
         <h2 class="text-center text-dark fw-bold mb-4">
-            Book A Free <span style="color: red;">Consultancy</span>
+            Book A Free <span class="blog-title">Consultancy</span>
         </h2>
 
         <form id="quotationForm" class="quotation-form">

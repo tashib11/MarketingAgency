@@ -3,7 +3,7 @@
         <!-- Left Column: Text -->
         <div class="col-md-6">
             <h2 class="fw-bold mb-4">
-                Discover the <span class="text-danger" style="text-decoration: underline red 4px;">Benefits</span> with Us
+                Discover the <span class=" blog-title">Benefits</span> with Us
             </h2>
 
             <ul class="list-unstyled">
