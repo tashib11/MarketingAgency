@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>TechTrove - eCommerce</title>
+		<title>IDSB-Global</title>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <style>
             body, html {
@@ -69,13 +69,17 @@
 						</a>
 						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-3">
 							<h4 class="h4 mb-0"><strong>Admin</strong></h4>
-							<div class="mb-3">tashib02c@gmail.com</div>
+							<div class="mb-3">info@idsb.com</div>
+                            <div class="mt-4">
+                                <a href="/" class="btn btn-danger">Home</a>
+
+                            </div>
 
 							<div class="dropdown-divider"></div>
 
 							<div class="dropdown-divider"></div>
-							<a href="{{url("/logout")}}" class="dropdown-item text-danger">
-								<i class="fas fa-sign-out-alt mr-2"></i> Logout
+							<a href="{{url("/logout")}}" class="dropdown-item text-danger ">
+								<i class="fas fa-sign-out-alt mr-2 "></i> <span class="btn btn-danger">Logout</span>
 							</a>
 						</div>
 					</li>
@@ -163,7 +167,7 @@
 			<!-- /.content-wrapper -->
 			<footer class="main-footer">
 
-				<strong>Copyright &copy; 2024 TechTrove All rights reserved.
+				<strong>Copyright &copy; 2025 IDSB-Global All rights reserved.
 			</footer>
 
 		</div>

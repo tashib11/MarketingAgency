@@ -65,8 +65,8 @@
                                         <!-- Admin Section with conditional routing -->
                                         @if ($token !== null && $user !== null)
                                             <li><a class="btn btn-danger btn-sm" href="{{ url('/logout') }}">Logout</a></li>
-                                            @if (isset($user->admin) && $user->admin === 'admin')
-                                                <li><a class="btn btn-danger btn-sm" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                                            @if (isset($user->role) && $user->role === 'admin')
+                                                <li><a class="btn btn-danger btn-sm" href="{{ url('/Dashboard') }}">Dashboard</a></li>
                                             @endif
                                         @else
                                             <li><a class="btn btn-danger btn-sm" href="{{ url('/login') }}">Admin</a></li>
