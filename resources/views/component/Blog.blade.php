@@ -1,10 +1,10 @@
 <!-- START SECTION BREADCRUMB -->
-<div class="breadcrumb_section" style="background: linear-gradient(to right, #1e3a8a, #3b5998); color: #f8f9fa; padding: 50px 0;">
+<div class="breadcrumb_section" style="background: linear-gradient(to right, #556493, #3e485d); color: #f8f9fa; padding: 50px 0;">
     <div class="container">
         <div class="row align-items-center">
             <!-- Left: 'Blog' Title -->
             <div class="col-md-3">
-                <h4 class="fw-bold m-0">Blog</h4>
+                <h3 class="fw-bold m-0 blog-title">Blog</h3>
             </div>
             <!-- Center: Dynamic Blog Title -->
             <div class="col-md-6 text-center">

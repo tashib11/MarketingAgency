@@ -1,3 +1,6 @@
+
+
+
 @php
     use App\Helper\JWTToken;
     $token = Cookie::get('token');
@@ -95,10 +98,13 @@
     });
 
     async function Category() {
-        let res = await axios.get("/CategoryList");
+        let res = await axios.get("/service-list");
         $("#CategoryItem").empty();
         res.data['data'].forEach((item, i) => {
-            let EachItem = `<li><a class="dropdown-item nav-link nav_item" href="/service?id=${item['id']}">${item['categoryName']}</a></li>`;
+            let plainTitle = item['title'].replace(/<\/?[^>]+(>|$)/g, ""); // Removes all HTML tags
+let EachItem = `<li><a class="dropdown-item nav-link nav_item category-item" href="/serviceById/${item['id']}">${plainTitle}</a></li>`;
+
+
             $("#CategoryItem").append(EachItem);
         });
     }

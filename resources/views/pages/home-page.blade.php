@@ -6,21 +6,14 @@
     @include('component.Services')
     @include('component.Benefits')
     @include('component.HomeConsultancy')
-
-
-\
     @include('component.Footer')
     <script>
         (async () => {
             await Category();
             // await Home();
             await loadServices() ;
-            $(".preloader").delay(90).fadeOut(100).addClass('loaded');
-            await Popular();
-            await New();
-            await Top();
-            await Trending();
-            await TopBrands();
+            $(".preloader").delay(70).fadeOut(100).addClass('loaded');
+
         })()
     </script>
 @endsection
