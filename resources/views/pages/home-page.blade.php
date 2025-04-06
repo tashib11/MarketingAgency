@@ -11,7 +11,7 @@
     <script>
         (async () => {
             await Category();
-            // await Home();
+            await loadHomeSlides();
              loadServices() ;
             $(".preloader").delay(70).fadeOut(100).addClass('loaded');
            await TopCategory();
