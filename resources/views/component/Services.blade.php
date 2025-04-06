@@ -105,44 +105,56 @@
     </div>
 </div>
 </div>
-
 <script>
-  async function loadServices() {
-    try {
-        let res = await axios.get("/service-list");
+    function showServiceSkeleton(count = 3) {
         let serviceContainer = document.getElementById("ServiceContainer");
-        serviceContainer.innerHTML = "";
-
-        res.data['data'].forEach((item) => {
-            let serviceUrl = `/serviceById/${item.id}`;
-
-            let serviceCard = `
+        let skeleton = "";
+        for (let i = 0; i < count; i++) {
+            skeleton += `
                 <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                    <a href="${serviceUrl}" class="text-decoration-none">
-                        <div class="service-card-wrapper">
-                            <div class="card service-card p-4">
-                                <div class="icon-circle">
-                                    <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
-                                </div>
-                                <h5 class="card-title text-dark">${item.title}</h5>
-                                <p class="card-text text-muted">${item.description}</p>
-                            </div>
+                    <div class="service-card-wrapper">
+                        <div class="card service-card p-4">
+                            <div class="icon-circle bg-light" style="height: 80px; width: 80px;"></div>
+                            <h5 class="card-title bg-light text-light" style="height: 20px; width: 60%; margin: 10px auto;"></h5>
+                            <p class="card-text bg-light" style="height: 80px; width: 100%;"></p>
                         </div>
-                    </a>
+                    </div>
                 </div>`;
-
-            serviceContainer.innerHTML += serviceCard;
-        });
-
-    } catch (error) {
-        console.error("Error fetching services:", error);
+        }
+        serviceContainer.innerHTML = skeleton;
     }
-}
 
-// Load services when the page is ready
-document.addEventListener("DOMContentLoaded", function () {
-    loadServices();
-});
+    async function loadServices() {
+        try {
+            showServiceSkeleton(); // Show loading placeholders
+            let res = await axios.get("/service-list");
+            let serviceContainer = document.getElementById("ServiceContainer");
+            serviceContainer.innerHTML = "";
 
-</script>
+            res.data['data'].forEach((item) => {
+                let serviceUrl = `/serviceById/${item.id}`;
+
+                let serviceCard = `
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <a href="${serviceUrl}" class="text-decoration-none">
+                            <div class="service-card-wrapper">
+                                <div class="card service-card p-4">
+                                    <div class="icon-circle">
+                                        <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                                    </div>
+                                    <h5 class="card-title text-dark">${item.title}</h5>
+                                    <p class="card-text text-muted">${item.description}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>`;
+                serviceContainer.innerHTML += serviceCard;
+            });
+
+        } catch (error) {
+            console.error("Error fetching services:", error);
+            document.getElementById("ServiceContainer").innerHTML = `<p class="text-danger">Failed to load services.</p>`;
+        }
+    }
+    </script>
 

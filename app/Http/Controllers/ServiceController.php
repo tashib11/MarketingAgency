@@ -3,12 +3,17 @@
 namespace App\Http\Controllers;
 use App\Models\Services;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ServiceController extends Controller
 {
     public function getServices()
     {
-        $services = Services::all(); // Fetch all services from database
+        // Cache services for 60 minutes to reduce DB load
+        $services = Cache::remember('services.list', 60, function () {
+            return Services::select('id', 'title', 'description')->get();
+        });
+
         return response()->json(['data' => $services]);
     }
 
