@@ -7,7 +7,7 @@
     <script>
         (async () => {
             await Category();
-            $(".preloader").delay(90).fadeOut(100).addClass('loaded');
+            $(".preloader").delay(70).fadeOut(100).addClass('loaded');
         })()
     </script>
 @endsection
