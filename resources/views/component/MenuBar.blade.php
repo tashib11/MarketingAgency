@@ -51,13 +51,13 @@
                                 <ul>
 
                                         <!-- About Us -->
-                                        <li><a class="nav-link nav_item" href="{{ url('/policy?type=about') }}"><i class="ti-info-alt"></i> About Us</a></li>
+                                        <li><a class="nav-link nav_item" href="{{ url('/about-us') }}"><i class="ti-info-alt"></i> About Us</a></li>
 
                                         <!-- Career -->
                                         {{-- <li><a class="nav-link nav_item" href="{{ url('/career') }}"><i class="ti-briefcase"></i> Career</a></li> --}}
 
                                         <!-- Contact Us -->
-                                        <li><a class="nav-link nav_item" href="{{ url('/policy?type=contact') }}"><i class="ti-email"></i> Contact Us</a></li>
+                                        <li><a class="nav-link nav_item" href="{{ url('/contact') }}"><i class="ti-email"></i> Contact Us</a></li>
 
                                         <!-- Admin Section with conditional routing -->
                                         @if ($token !== null && $user !== null)

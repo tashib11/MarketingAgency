@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrandController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ConsultancyController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FreeConsultanyController;
 use App\Http\Controllers\SeoBookingControler;
@@ -29,7 +31,7 @@ Route::get('/consultancy', [ConsultancyController::class, 'ConsultPage']);
 
 Route::get('/service', [CategoryController::class, 'ByCategoryPage']);
 Route::get('/by-brand', [BrandController::class, 'ByBrandPage']);
-Route::get('/policy', [PolicyController::class, 'PolicyPage']);
+// Route::get('/policy', [PolicyController::class, 'PolicyPage']);
 Route::get('/details', [ProductController::class, 'Details']);
 Route::get('/login', [UserController::class, 'LoginPage']);
 Route::get('/verify', [UserController::class, 'VerifyPage']);
@@ -138,6 +140,13 @@ Route::get('/serviceById/{id}', [ServiceController::class, 'show']);
 Route::post('/service-booking', [ServiceBookingController::class, 'store']);
 Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
 Route::post('/free-consultancy', [FreeConsultanyController::class, 'store']);
+
+
+Route::get('/about-us', [AboutController::class, 'AboutPage']);
+Route::get('/contact', [ContactController::class, 'ContactPage']);
+
+
+
 
 
 
