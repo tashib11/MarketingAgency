@@ -145,7 +145,7 @@ ul.text-muted li {
 <div class="py-5 text-center">
     <div class="container">
         <h2 class="fw-bold text-dark position-relative d-inline-block">
-       How We<span class=" blog-title">Help?</span>
+       How We <span class=" blog-title"> Help?</span>
         </h2>
     </div>
 </div>

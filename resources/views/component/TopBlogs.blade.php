@@ -45,7 +45,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="heading_s4 text-center">
-                    <h2>Top Blogs</h2>
+                    <h2 class="blog-title">Top Blogs</h2>
                 </div>
                 <p class="text-center leads">Explore the Blogs</p>
             </div>

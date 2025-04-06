@@ -195,7 +195,7 @@
 <div class="container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6 text-center text-lg-start">
-            <h1 class="fw-bold text-danger">Web Design & Development</h1>
+            <h1 class="fw-bold text-danger"> <span class="blog-title">Web </span> Design & Development</h1>
             <p class="text-dark">
                 Web design and development for business is a necessary part of any company’s online presence.
                 By creating an effective and user-friendly website, businesses can draw in more customers and keep them longer.
