@@ -71,7 +71,7 @@
 							<h4 class="h4 mb-0"><strong>Admin</strong></h4>
 							<div class="mb-3">info@idsb.com</div>
                             <div class="mt-4">
-                                <a href="/" class="btn btn-danger">Home</a>
+                                <a href="{{url("/")}}" class="btn btn-danger">Home</a>
 
                             </div>
 
