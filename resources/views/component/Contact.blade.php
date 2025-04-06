@@ -202,7 +202,7 @@ ul.text-muted li {
 <div style="background: #f5f5f5;">
 
     <div class="col-lg-12 text-center mt-5" style="padding: 50px 0">  <!-- Added mt-5 here -->
-        <img src="{{ asset('assets/images/map.jpg') }}" alt="Web Development" class="img-fluid w-75">
+        <img src="{{ secure_asset('assets/images/map.jpg') }}" alt="Web Development" class="img-fluid w-75">
     </div>
 
 </div>

@@ -8,7 +8,7 @@
 
             <ul class="list-unstyled">
                 <li class="d-flex align-items-start mb-4 benefit-item">
-                    <img src="{{ asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
+                    <img src="{{ secure_asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
                     <div>
                         <h5 class="fw-bold text-dark mb-1">Extensive Expertise</h5>
                         <p class="text-muted mb-0">
@@ -18,7 +18,7 @@
                 </li>
 
                 <li class="d-flex align-items-start mb-4 benefit-item">
-                    <img src="{{ asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
+                    <img src="{{ secure_asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
                     <div>
                         <h5 class="fw-bold text-dark mb-1">Proven Track Record</h5>
                         <p class="text-muted mb-0">
@@ -28,7 +28,7 @@
                 </li>
 
                 <li class="d-flex align-items-start mb-4 benefit-item">
-                    <img src="{{ asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
+                    <img src="{{ secure_asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
                     <div>
                         <h5 class="fw-bold text-dark mb-1">Innovative Strategies</h5>
                         <p class="text-muted mb-0">
@@ -38,7 +38,7 @@
                 </li>
 
                 <li class="d-flex align-items-start mb-4 benefit-item">
-                    <img src="{{ asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
+                    <img src="{{ secure_asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
                     <div>
                         <h5 class="fw-bold text-dark mb-1">Personalized Solutions</h5>
                         <p class="text-muted mb-0">
@@ -48,7 +48,7 @@
                 </li>
 
                 <li class="d-flex align-items-start mb-0 benefit-item">
-                    <img src="{{ asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
+                    <img src="{{ secure_asset('assets/images/tick.svg') }}" alt="Check Icon" width="30" class="me-3 mt-1">
                     <div>
                         <h5 class="fw-bold text-dark mb-1">Client-Centric Approach</h5>
                         <p class="text-muted mb-0">
@@ -61,7 +61,7 @@
 
         <!-- Right Column: Image -->
         <div class="col-md-6 text-center">
-            <img src="{{ asset('assets/images/benefit.jpeg') }}" alt="IMBD Office" class="img-fluid rounded shadow benefit-image">
+            <img src="{{ secure_asset('assets/images/benefit.jpeg') }}" alt="IMBD Office" class="img-fluid rounded shadow benefit-image">
         </div>
     </div>
 </div>

@@ -279,7 +279,7 @@
             </div>
         </div>
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ asset('assets/images/dmtheme.jpg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ secure_asset('assets/images/dmtheme.jpg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
     </div>
 </div>
@@ -304,7 +304,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Digital Marketing for
                             Restaurant</h5>
@@ -321,7 +321,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Digital Marketing for
                             Hotel/Resort</h5>
@@ -338,7 +338,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Digital Marketing for
                             E-Commerce</h5>
@@ -381,7 +381,7 @@
         </div>
          <!-- Right Section - Timeline -->
          <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ asset('assets/images/DM.png') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ secure_asset('assets/images/DM.png') }}" alt="Web Development" class="img-fluid w-75">
         </div>
     </div>
         <!--Second  Laravel Service Card -->
@@ -390,7 +390,7 @@
             <div class="custom-service-card-wrapper">
                 <div class="card custom-service-card">
                     <div class="icon-circle">
-                        <img src="{{ asset('assets/images/star.svg') }}" alt="Laravel Logo" class="img-fluid">
+                        <img src="{{ secure_asset('assets/images/star.svg') }}" alt="Laravel Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">Brand Values</h5>
                     <p class="card-text text-muted">
@@ -405,7 +405,7 @@
             <div class="custom-service-card-wrapper">
                 <div class="card custom-service-card">
                     <div class="icon-circle">
-                        <img src="{{ asset('assets/images/road.svg') }}" alt="Laravel Logo" class="img-fluid">
+                        <img src="{{ secure_asset('assets/images/road.svg') }}" alt="Laravel Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">
                         Mission and Vision</h5>
@@ -421,7 +421,7 @@
             <div class="custom-service-card-wrapper">
                 <div class="card custom-service-card">
                     <div class="icon-circle">
-                        <img src="{{ asset('assets/images/crown.svg') }}" alt="Laravel Logo" class="img-fluid">
+                        <img src="{{ secure_asset('assets/images/crown.svg') }}" alt="Laravel Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">
                         Brand Personality</h5>
@@ -437,7 +437,7 @@
             <div class="custom-service-card-wrapper">
                 <div class="card custom-service-card">
                     <div class="icon-circle">
-                        <img src="{{ asset('assets/images/eye.svg') }}" alt="Laravel Logo" class="img-fluid">
+                        <img src="{{ secure_asset('assets/images/eye.svg') }}" alt="Laravel Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">
                         Visual Elements</h5>
@@ -473,7 +473,7 @@
             </p>
         </div>
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ asset('assets/images/dmtheme.jpg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ secure_asset('assets/images/dmtheme.jpg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
     </div>
 </div>

@@ -206,7 +206,7 @@
             </div>
         </div>
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ asset('assets/images/website.png') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ secure_asset('assets/images/website.png') }}" alt="Web Development" class="img-fluid w-75">
         </div>
     </div>
 </div>
@@ -229,7 +229,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/laravel.svg') }}" alt="Laravel Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/laravel.svg') }}" alt="Laravel Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Laravel Website</h5>
                         <p class="card-text text-muted">
@@ -245,7 +245,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/wordpress.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/wordpress.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Wordress Website</h5>
                         <p class="card-text text-muted">

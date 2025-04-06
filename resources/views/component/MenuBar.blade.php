@@ -27,7 +27,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                     <img class="logo_dark" src="{{asset('assets/images/idsb.svg')}}" alt="logo" />
+                     <img class="logo_dark" src="{{secure_asset('assets/images/idsb.svg')}}" alt="logo" />
                     {{-- <h2>IDSB global</h2> --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

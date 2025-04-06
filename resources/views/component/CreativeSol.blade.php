@@ -156,7 +156,7 @@ ul.text-muted li {
             <div class="service-card-wrapper">
                 <div class="card service-card">
                     <div class="icon-circle">
-                        <img src="{{ asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
+                        <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">Graphics Design</h5>
 
@@ -173,7 +173,7 @@ ul.text-muted li {
             <div class="service-card-wrapper">
                 <div class="card service-card">
                     <div class="icon-circle">
-                        <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                        <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">Motion Graphics</h5>
                     <p class="card-text text-muted">
@@ -188,7 +188,7 @@ ul.text-muted li {
             <div class="service-card-wrapper">
                 <div class="card service-card">
                     <div class="icon-circle">
-                        <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                        <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">Video Editing</h5>
                     <p class="card-text text-muted">
@@ -207,7 +207,7 @@ ul.text-muted li {
         <div class="col-lg-6 text-center text-lg-start">
             <h2 class="fw-bold text-danger">We Provide Clients Modern Innovative Solution</h2>
             <div class="col-lg-12 text-center mt-5">  <!-- Added mt-5 here -->
-                <img src="{{ asset('assets/images/crs2.jpeg') }}" alt="Web Development" class="img-fluid w-75">
+                <img src="{{ secure_asset('assets/images/crs2.jpeg') }}" alt="Web Development" class="img-fluid w-75">
             </div>
 
         </div>

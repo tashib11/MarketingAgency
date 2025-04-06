@@ -122,7 +122,7 @@
                         <div class="service-card-wrapper">
                             <div class="card service-card p-4">
                                 <div class="icon-circle">
-                                    <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                                    <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
                                 </div>
                                 <h5 class="card-title text-dark">${item.title}</h5>
                                 <p class="card-text text-muted">${item.description}</p>

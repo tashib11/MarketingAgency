@@ -142,7 +142,7 @@
 <div class="container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ asset('assets/images/SEO2.jpeg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ secure_asset('assets/images/SEO2.jpeg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <h1 class=" blog-title">SEO</h1>
@@ -163,7 +163,7 @@
 <div class="container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ asset('assets/images/SEO.jpeg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ secure_asset('assets/images/SEO.jpeg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <h3 class="fw-bold text-danger">Is it easy to find your company</h3>
@@ -195,7 +195,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Technical SEO</h5>
                         <p class="card-text text-muted">
@@ -211,7 +211,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">On-Page SEO</h5>
                         <p class="card-text text-muted">
@@ -226,7 +226,7 @@
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h5 class="card-title text-dark">Off-Page SEO</h5>
                         <p class="card-text text-muted">
