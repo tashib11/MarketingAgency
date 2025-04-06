@@ -63,14 +63,14 @@
                                         <li><a class="nav-link nav_item" href="{{ url('/contact') }}"><i class="ti-email"></i> Contact Us</a></li>
 
                                         <!-- Admin Section with conditional routing -->
-                                        @if ($token !== null && $user !== null)
+                                        {{-- @if ($token !== null && $user !== null)
                                             <li><a class="btn btn-danger btn-sm" href="{{ url('/logout') }}">Logout</a></li>
                                             @if (isset($user->role) && $user->role === 'admin')
                                                 <li><a class="btn btn-danger btn-sm" href="{{ url('/Dashboard') }}">Dashboard</a></li>
                                             @endif
                                         @else
                                             <li><a class="btn btn-danger btn-sm" href="{{ url('/login') }}">Admin</a></li>
-                                        @endif
+                                        @endif --}}
 
                                 </ul>
                             </div>
