@@ -28,7 +28,7 @@
 
 /* Card Hover Effects */
 .service-card-wrapper:hover {
-    background: linear-gradient(135deg, #E74C3C, #FC5C7D);
+    background: linear-gradient(135deg,  #3cc8e7, #FC5C7D);
     padding: 5px;
     border-radius: 12px;
     transform: translateY(-8px);

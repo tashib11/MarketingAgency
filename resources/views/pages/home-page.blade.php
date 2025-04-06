@@ -6,6 +6,7 @@
     @include('component.Services')
     @include('component.Benefits')
     @include('component.HomeConsultancy')
+    @include('component.TopBlogs')
     @include('component.Footer')
     <script>
         (async () => {
@@ -13,6 +14,8 @@
             // await Home();
             await loadServices() ;
             $(".preloader").delay(70).fadeOut(100).addClass('loaded');
+           await TopCategory();
+
 
         })()
     </script>

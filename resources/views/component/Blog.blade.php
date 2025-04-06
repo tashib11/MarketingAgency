@@ -81,11 +81,23 @@
 
 
 <script>
+     function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
-        @if($blogs->isNotEmpty())
-            loadBlog({{ $blogs->first()->id }});
-            setActive({{ $blogs->first()->id }}); // Highlight the selected post
-        @endif
+        let blogId = getQueryParam("page_id");
+
+        if (blogId) {
+            loadBlog(blogId);
+            setActive(blogId);
+        } else {
+            @if($blogs->isNotEmpty())
+                loadBlog({{ $blogs->first()->id }});
+                setActive({{ $blogs->first()->id }});
+            @endif
+        }
     });
 
     async function loadBlog(id) {
