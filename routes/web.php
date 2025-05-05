@@ -33,8 +33,18 @@ Route::get('/login', [UserController::class, 'LoginPage']);
 Route::get('/verify', [UserController::class, 'VerifyPage']);
 
 Route::get('/blog', [BlogController::class, 'BlogPage']);
-Route::get('/blogList', [BlogController::class, 'BlogList']);
-Route::get('/blog/{id}', [BlogController::class, 'getBlog']);
+Route::get('/blog/{id}', [BlogController::class, 'BlogPage']);
+// Route::get('/blogList', [BlogController::class, 'BlogList']);
+// Route::get('/blog/{id}', [BlogController::class, 'getBlog']);
+
+// Route::get('/blog/{id}', function () {
+//     return view('pages.blog-page');
+// });
+
+Route::get('/api/blog/{id}', [BlogController::class, 'show']);
+Route::get('/api/blog-recent', [BlogController::class, 'recent']);
+Route::get('/blogList', [BlogController::class, 'list']);
+
 
 Route::get('/about-us', [AboutController::class, 'AboutPage']);
 Route::get('/contact', [ContactController::class, 'ContactPage']);

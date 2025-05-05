@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     use HasFactory;
-    protected $fillable = ['title'];
+    protected $fillable = ['title','content'];
 
-    public function contents()
-    {
-        return $this->hasMany(BlogContent::class);
-    }
 }

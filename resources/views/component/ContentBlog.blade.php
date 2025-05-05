@@ -146,7 +146,7 @@ ul.text-muted li {
 <div class="container py-5">
     <div class="row align-items-center "style="padding:60px 0">
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ secure_asset('assets/images/content3.jpeg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ asset('assets/images/content3.jpeg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <h1 class="fw-bold text-danger">Content Solution</h1>
@@ -180,7 +180,7 @@ ul.text-muted li {
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
+                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
                         </div>
                         <h1 class="card-title text-dark">65%</h1>
                         <p class="card-text text-muted">
@@ -196,7 +196,7 @@ ul.text-muted li {
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h1 class="card-title text-dark">72%</h1>
                         <p class="card-text text-muted">
@@ -210,7 +210,7 @@ ul.text-muted li {
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h1 class="card-title text-dark">52%</h1>
                         <p class="card-text text-muted">
@@ -223,7 +223,7 @@ ul.text-muted li {
                 <div class="service-card-wrapper">
                     <div class="card service-card">
                         <div class="icon-circle">
-                            <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                            <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                         </div>
                         <h1 class="card-title text-dark">3X</h1>
                         <p class="card-text text-muted">
@@ -241,7 +241,7 @@ ul.text-muted li {
 <div class="container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ secure_asset('assets/images/content2.jpeg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ asset('assets/images/content2.jpeg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <h2 class="fw-bold text-danger">Content Audit & Strategy</h2>

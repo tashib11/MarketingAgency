@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-        $table->string('title');
-        $table->timestamps();
+            $table->string('title');
+            $table->longText('content'); // This will store JSON with text & image blocks
+            $table->timestamps();
         });
     }
 
