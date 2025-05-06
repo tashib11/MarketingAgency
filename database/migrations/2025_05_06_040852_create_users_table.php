@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('email',50)->unique();
             $table->string('otp',10);
-            $table->timestamps(); // This will automatically add 'created_at' and 'updated_at'
-           
+            $table->string('admin',100)->nullable();
+            $table->timestamps();
         });
     }
 

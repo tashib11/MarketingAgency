@@ -100,81 +100,105 @@
     }
 }
 
+.blog-html-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.blog-html-content p {
+    margin-bottom: 1rem;
+    color: #343a40;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.blog-html-content h1,
+.blog-html-content h2,
+.blog-html-content h3 {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #212529;
+}
+#blog-content a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+#blog-content a:visited {
+    color: #6f42c1; /* Optional visited color */
+}
+#blog-content a:hover {
+    text-decoration: none;
+    color: #e93e3e;
+}
+
 </style>
 
 <!-- SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
-   document.addEventListener('DOMContentLoaded', function () {
-    const blogTitleEl = document.getElementById('blog-title');
-    const blogContentEl = document.getElementById('blog-content');
-    const blogListEl = document.getElementById('blog-list');
+    document.addEventListener('DOMContentLoaded', function () {
+        const blogTitleEl = document.getElementById('blog-title');
+        const blogContentEl = document.getElementById('blog-content');
+        const blogListEl = document.getElementById('blog-list');
 
-    function renderBlog(id) {
-        // Show loading spinner for blog content
-        blogContentEl.innerHTML = '<div class="text-center py-4"><div class="spinner-border text-primary" role="status"></div></div>';
+        function renderBlog(id) {
+            blogContentEl.innerHTML = `
+                <div class="text-center py-4">
+                    <div class="spinner-border text-primary" role="status"></div>
+                </div>
+            `;
 
-        // First, fetch the sidebar (recent posts)
-        updateSidebar(id);
+            updateSidebar(id);
 
-        // Now fetch the blog content
-        axios.get(`/api/blog/${id}`).then(res => {
-            const blog = res.data.blog;
-            blogTitleEl.textContent = blog.title;
+            axios.get(`/api/blog/${id}`).then(res => {
+                const blog = res.data.blog;
+                blogTitleEl.textContent = blog.title;
 
-            let html = '';
-            blog.content.forEach(block => {
-                if (block.type === 'text') {
-                    html += `<p>${block.value}</p>`;
-                } else if (block.type === 'image') {
-                    html += `<img src="${block.value}" class="img-fluid my-3"/>`;
-                }
+                // Directly inject TinyMCE HTML
+                blogContentEl.innerHTML = `<div class="blog-html-content">${blog.content}</div>`;
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
-            blogContentEl.innerHTML = html;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
+        }
 
-    function updateSidebar(currentId) {
-        // Fetch and display the recent posts immediately
-        axios.get('/api/blog-recent').then(res => {
-            let listHtml = '';
-            res.data.forEach(blog => {
-                const isActive = blog.id == currentId;
-                listHtml += `
-                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center ${isActive ? 'active-blog' : ''}" data-id="${blog.id}">
-                        <span>${blog.title} ${isActive ? '<i class="bi bi-check-circle-fill text-primary ms-2"></i>' : ''}</span>
-                        <small class="text-muted">${blog.date}</small>
-                    </a>
-                `;
-            });
-            blogListEl.innerHTML = listHtml;
+        function updateSidebar(currentId) {
+            axios.get('/api/blog-recent').then(res => {
+                let listHtml = '';
+                res.data.forEach(blog => {
+                    const isActive = blog.id == currentId;
+                    listHtml += `
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center ${isActive ? 'active-blog' : ''}" data-id="${blog.id}">
+                            <span>${blog.title} ${isActive ? '<i class="bi bi-check-circle-fill text-primary ms-2"></i>' : ''}</span>
+                            <small class="text-muted">${blog.date}</small>
+                        </a>
+                    `;
+                });
+                blogListEl.innerHTML = listHtml;
 
-            // 🔥 Intercept all sidebar link clicks to load dynamically
-            document.querySelectorAll('#blog-list a').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault(); // prevent full page reload
-                    const id = this.getAttribute('data-id');
-                    renderBlog(id);
+                document.querySelectorAll('#blog-list a').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const id = this.getAttribute('data-id');
+                        renderBlog(id);
+                    });
                 });
             });
-        });
-    }
+        }
 
-    // Determine blog ID from URL
-    const parts = window.location.pathname.split('/');
-    let blogId = parts[parts.length - 1];
+        const parts = window.location.pathname.split('/');
+        let blogId = parts[parts.length - 1];
 
-    if (!blogId || isNaN(blogId)) {
-        // No blog ID → fetch latest
-        axios.get('/api/blog-recent').then(res => {
-            if (res.data.length > 0) {
-                renderBlog(res.data[0].id);
-            }
-        });
-    } else {
-        renderBlog(blogId);
-    }
-});
+        if (!blogId || isNaN(blogId)) {
+            axios.get('/api/blog-recent').then(res => {
+                if (res.data.length > 0) {
+                    renderBlog(res.data[0].id);
+                }
+            });
+        } else {
+            renderBlog(blogId);
+        }
+    });
 
     </script>

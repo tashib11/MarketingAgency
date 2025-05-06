@@ -9,10 +9,8 @@ class DashboardController extends Controller
 {
     public function dashboardPage()
     {
-        $data = [];
-        $totalUsers = User::count();
-        $data['totalUsers'] = $totalUsers;
-        return view('admin.dashboard', $data);
+
+        return view('admin.blog-create');
         // return view('pages.home-page');
 
     }

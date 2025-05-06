@@ -34,16 +34,16 @@ Route::get('/verify', [UserController::class, 'VerifyPage']);
 
 Route::get('/blog', [BlogController::class, 'BlogPage']);
 Route::get('/blog/{id}', [BlogController::class, 'BlogPage']);
-// Route::get('/blogList', [BlogController::class, 'BlogList']);
-// Route::get('/blog/{id}', [BlogController::class, 'getBlog']);
 
-// Route::get('/blog/{id}', function () {
-//     return view('pages.blog-page');
-// });
 
 Route::get('/api/blog/{id}', [BlogController::class, 'show']);
 Route::get('/api/blog-recent', [BlogController::class, 'recent']);
 Route::get('/blogList', [BlogController::class, 'list']);
+
+Route::get('/admin/blog/create', [BlogController::class, 'create'])->name('blog.create');
+Route::post('/admin/blog/store', [BlogController::class, 'store'])->name('blog.store');
+Route::post('/api/blog-upload-image', [BlogController::class, 'uploadImage']);
+
 
 
 Route::get('/about-us', [AboutController::class, 'AboutPage']);
