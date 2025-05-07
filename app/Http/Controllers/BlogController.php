@@ -18,20 +18,12 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
 
-        // Decode the content (assumes it's a JSON array of blocks)
-        $contentBlocks = json_decode($blog->content, true);
-
-        // Format the blog
         $formattedBlog = [
             'title' => $blog->title,
             'date' => $blog->created_at->format('M d, Y'),
-            'content' => array_map(function ($block) {
-                return [
-                    'type' => $block['type'],
-                    'value' => $block['data'] ?? '', // make sure this matches your structure
-                ];
-            }, $contentBlocks ?? []),
+            'content' => $blog->content, // full HTML content
         ];
+
 
         // Get recent posts (excluding current blog)
         $recent = Blog::where('id', '!=', $id)
@@ -68,19 +60,16 @@ class BlogController extends Controller
     return response()->json($formatted);
 }
 
-    public function list()
+public function list()
 {
     $blogs = Blog::latest()->get();
 
     $formatted = $blogs->map(function ($blog) {
-        $content = json_decode($blog->content, true);
         $firstImage = null;
 
-        foreach ($content as $block) {
-            if ($block['type'] === 'image' && !empty($block['data'])) {
-                $firstImage = $block['data'];
-                break;
-            }
+        // Try to extract first <img src="..."> using regex
+        if (preg_match('/<img[^>]+src="([^">]+)"/i', $blog->content, $matches)) {
+            $firstImage = $matches[1];
         }
 
         return [
@@ -94,5 +83,104 @@ class BlogController extends Controller
     return response()->json($formatted);
 }
 
+
+public function create()
+{
+    return view('admin.blog-create');
+}
+
+public function store(Request $request)
+{
+    $request->validate([
+        'title' => 'required|string',
+        'content' => 'required|string',
+    ]);
+
+    // Normalize content: convert relative src to full URLs
+    $content = preg_replace_callback(
+        '/<img[^>]+src="(uploads\/blogs\/[^">]+)"/i',
+        function ($matches) {
+            return str_replace(
+                $matches[1],
+                asset($matches[1]),
+                $matches[0]
+            );
+        },
+        $request->content
+    );
+
+    Blog::create([
+        'title' => $request->title,
+        'content' => $content,
+        'date' => now()->toDateString(),
+    ]);
+
+    return redirect()->back()->with('success', 'Blog created successfully!');
+}
+
+
+public function uploadImage(Request $request)
+{
+    if ($request->hasFile('image')) {
+        $file = $request->file('image');
+
+        // Validate image type and size
+        $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+
+        // Unique filename
+        $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+
+        // Store in public/uploads/blogs/
+        $file->move(public_path('uploads/blogs'), $filename);
+
+        // Return URL
+        return response()->json([
+            'url' => asset('uploads/blogs/' . $filename)
+        ]);
+    }
+
+    return response()->json(['error' => 'No image uploaded'], 400);
+}
+
+public function index(Request $request)
+{
+    $search = $request->input('search');
+    $blogs = Blog::when($search, function ($query, $search) {
+        return $query->where('title', 'like', '%' . $search . '%');
+    })->orderBy('created_at', 'desc')->paginate(10);
+
+    if ($request->ajax()) {
+        return view('admin.blog-table', compact('blogs'))->render();
+    }
+
+    return view('admin.blog-index', compact('blogs'));
+}
+
+
+public function edit($id)
+{
+    $blog = Blog::findOrFail($id);
+    return view('admin.blog-edit', compact('blog'));
+}
+
+public function update(Request $request, $id)
+{
+    $blog = Blog::findOrFail($id);
+    $blog->title = $request->title;
+    $blog->content = $request->content; // content contains TinyMCE HTML
+    $blog->save();
+
+    return redirect()->route('admin.blogs')->with('success', 'Blog updated successfully.');
+}
+
+public function destroy($id)
+{
+    $blog = Blog::findOrFail($id);
+    $blog->delete();
+
+    return redirect()->route('admin.blogs')->with('success', 'Blog deleted.');
+}
 
 }
