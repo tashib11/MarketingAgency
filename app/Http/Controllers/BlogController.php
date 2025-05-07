@@ -96,53 +96,34 @@ public function store(Request $request)
         'content' => 'required|string',
     ]);
 
-    // Normalize content: convert relative src to full URLs
-    $content = preg_replace_callback(
-        '/<img[^>]+src="(uploads\/blogs\/[^">]+)"/i',
-        function ($matches) {
-            return str_replace(
-                $matches[1],
-                asset($matches[1]),
-                $matches[0]
-            );
-        },
-        $request->content
-    );
-
     Blog::create([
         'title' => $request->title,
-        'content' => $content,
+        'content' => $request->content,
         'date' => now()->toDateString(),
     ]);
 
     return redirect()->back()->with('success', 'Blog created successfully!');
 }
 
-
 public function uploadImage(Request $request)
 {
     if ($request->hasFile('image')) {
-        $file = $request->file('image');
-
-        // Validate image type and size
         $request->validate([
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        // Unique filename
-        $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        // Store the image in storage/app/public/blog-images
+        $path = $request->file('image')->store('blog-images', 'public');
 
-        // Store in public/uploads/blogs/
-        $file->move(public_path('uploads/blogs'), $filename);
-
-        // Return URL
+        // Return the accessible URL (via storage link)
         return response()->json([
-            'url' => asset('uploads/blogs/' . $filename)
+            'url' => asset('storage/' . $path)
         ]);
     }
 
     return response()->json(['error' => 'No image uploaded'], 400);
 }
+
 
 public function index(Request $request)
 {

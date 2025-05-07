@@ -33,7 +33,6 @@ Route::get('/login', [UserController::class, 'LoginPage']);
 Route::get('/verify', [UserController::class, 'VerifyPage']);
 
 Route::get('/blog', [BlogController::class, 'BlogPage']);
-Route::get('/blog/{id}', [BlogController::class, 'BlogPage']);
 
 
 Route::get('/api/blog/{id}', [BlogController::class, 'show']);
