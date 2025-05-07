@@ -44,6 +44,20 @@ Route::get('/admin/blog/create', [BlogController::class, 'create'])->name('blog.
 Route::post('/admin/blog/store', [BlogController::class, 'store'])->name('blog.store');
 Route::post('/api/blog-upload-image', [BlogController::class, 'uploadImage']);
 
+// Admin blog list
+Route::get('/admin/blogs', [BlogController::class, 'index'])->name('admin.blogs');
+
+// Edit blog
+Route::get('/admin/blogs/{id}/edit', [BlogController::class, 'edit'])->name('admin.blogs.edit');
+
+// Update blog
+// Update blog (change from POST to PUT)
+Route::put('/admin/blogs/{id}', [BlogController::class, 'update'])->name('blog.update');
+
+
+// Delete blog
+Route::delete('/admin/blogs/{id}', [BlogController::class, 'destroy'])->name('admin.blogs.delete');
+
 
 
 Route::get('/about-us', [AboutController::class, 'AboutPage']);

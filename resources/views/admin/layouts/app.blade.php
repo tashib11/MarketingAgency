@@ -185,10 +185,15 @@
         <script src="{{ asset('admin-assets/plugins/summernote/summernote.min.js') }}"></script>
 		<!-- AdminLTE for demo purposes -->
 		<script src="{{  asset('admin-assets/js/demo.js') }}"></script>
+<!-- jQuery (required for AJAX) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Yield page-specific scripts -->
+@yield('scripts')
 
 
         @yield('pie')
-
 
 
 	</body>

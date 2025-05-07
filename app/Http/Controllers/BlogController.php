@@ -144,4 +144,43 @@ public function uploadImage(Request $request)
     return response()->json(['error' => 'No image uploaded'], 400);
 }
 
+public function index(Request $request)
+{
+    $search = $request->input('search');
+    $blogs = Blog::when($search, function ($query, $search) {
+        return $query->where('title', 'like', '%' . $search . '%');
+    })->orderBy('created_at', 'desc')->paginate(10);
+
+    if ($request->ajax()) {
+        return view('admin.blog-table', compact('blogs'))->render();
+    }
+
+    return view('admin.blog-index', compact('blogs'));
+}
+
+
+public function edit($id)
+{
+    $blog = Blog::findOrFail($id);
+    return view('admin.blog-edit', compact('blog'));
+}
+
+public function update(Request $request, $id)
+{
+    $blog = Blog::findOrFail($id);
+    $blog->title = $request->title;
+    $blog->content = $request->content; // content contains TinyMCE HTML
+    $blog->save();
+
+    return redirect()->route('admin.blogs')->with('success', 'Blog updated successfully.');
+}
+
+public function destroy($id)
+{
+    $blog = Blog::findOrFail($id);
+    $blog->delete();
+
+    return redirect()->route('admin.blogs')->with('success', 'Blog deleted.');
+}
+
 }

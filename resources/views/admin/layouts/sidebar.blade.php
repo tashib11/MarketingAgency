@@ -19,9 +19,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ asset('/Dashboard') }}" class="nav-link">
+                    <a href="{{ asset('/admin/blogs') }}" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>
-                        <p>Category</p>
+                        <p>Blog List</p>
                     </a>
                 </li>
 
