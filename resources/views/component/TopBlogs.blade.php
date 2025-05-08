@@ -24,12 +24,7 @@
         width: 100%;
     }
 
-    .blog-card-body {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .blog-card-title {
+    .blog-card h3 {
         font-size: 1.1rem;
         font-weight: 600;
         color: #333;
@@ -37,83 +32,104 @@
         transition: color 0.3s;
     }
 
-    .blog-card:hover .blog-card-title {
+    .blog-card:hover h3 {
         color: #FC5C7D;
     }
 
-    .blog-card-date {
+    .blog-card p {
         font-size: 0.85rem;
         color: #888;
+        margin-bottom: 0;
     }
 
     .blog-title {
-    font-weight: 700;
-    color: #333;
-}
+        font-weight: 700;
+        color: #333;
+    }
 
-.blog-detail-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5rem;
-}
+    .blog-detail-image {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1.5rem;
+    }
 
     #blog-sidebar {
-    background: #f8f9fa;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    margin-top: -15px;
-}
+        background: #f8f9fa;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        margin-top: -15px;
+    }
 
-#recent-posts .list-group-item {
-    border: none;
-    border-radius: 8px;
-    transition: background 0.3s;
-    cursor: pointer;
-}
+    #recent-posts {
+        max-height: 400px;
+        overflow-y: auto;
+    }
 
-#recent-posts .list-group-item:hover {
-    background-color: #e9ecef;
-}
+    #recent-posts .list-group-item {
+        border: none;
+        border-radius: 8px;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
 
-/* Shared Blog Content Styling */
-#blog-content img {
-    max-width: 100%;
-    height: auto;
-    margin: 1rem 0;
-    border-radius: 8px;
-}
+    #recent-posts .list-group-item:hover {
+        background-color: #e9ecef;
+    }
 
-#blog-content p {
-    margin-bottom: 1rem;
-    color: #343a40;
-    font-size: 1rem;
-    line-height: 1.7;
-}
+    /* Shared Blog Content Styling */
+    #blog-content img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        border-radius: 8px;
+    }
 
-#blog-content h1,
-#blog-content h2,
-#blog-content h3 {
-    margin-top: 1.5rem;
-    font-weight: bold;
-    color: #212529;
-}
-#blog-content a {
-    color: #0d6efd;
-    text-decoration: none;
-}
-#blog-content a:visited {
-    color: #6f42c1; /* Optional visited color */
-    text-decoration: none;
+    #blog-content p {
+        margin-bottom: 1rem;
+        color: #343a40;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
 
-}
-#blog-content a:hover {
-    text-decoration: none;
-    color: #e93e3e;
-}
+    #blog-content h1,
+    #blog-content h2,
+    #blog-content h3 {
+        margin-top: 1.5rem;
+        font-weight: bold;
+        color: #212529;
+    }
 
+    #blog-content a {
+        color: #0d6efd;
+        text-decoration: none;
+    }
 
+    #blog-content a:visited {
+        color: #6f42c1;
+        text-decoration: none;
+    }
+
+    #blog-content a:hover {
+        text-decoration: none;
+        color: #e93e3e;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 576px) {
+        .blog-card h3 {
+            font-size: 1rem;
+        }
+
+        .blog-card p {
+            font-size: 0.75rem;
+        }
+
+        .blog-card .p-3 {
+            padding: 1rem;
+        }
+    }
 </style>
 
 <!-- Blog cards container (visible on home) -->
