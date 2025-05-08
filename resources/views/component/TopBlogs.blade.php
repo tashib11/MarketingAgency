@@ -190,7 +190,7 @@
                     <div class="blog-card" style="cursor:pointer;" onclick="navigateToBlog(${item.id})">
                         ${image}
                         <div class="p-3 text-center">
-                            <h5>${item.title}</h5>
+                            <h3>${item.title}</h3>
                             <p class="text-muted">${item.date}</p>
                         </div>
                     </div>
@@ -221,14 +221,22 @@
             const blog = response.data.blog;
             const recentPosts = response.data.recent;
 
-            // Inject blog content
-            $("#blog-content").html(`
+          // After injecting blog.content
+$("#blog-content").html(`
     <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
-        <h2 class="blog-title mb-3">${blog.title}</h2>
+        <h1 class="blog-title mb-3">${blog.title}</h1>
         <p class="text-muted mb-4">${blog.date}</p>
         ${blog.content}
     </div>
 `);
+
+// ✅ Fix relative image paths
+$("#blog-content img").each(function () {
+    const src = $(this).attr("src");
+    if (src && !src.startsWith("http") && !src.startsWith("/")) {
+        $(this).attr("src", "/" + src);
+    }
+});
 
 
 
@@ -254,9 +262,6 @@ $("#recent-posts a[data-id]").on("click", function (e) {
 });
 
 
-            if (pushState) {
-                history.pushState({ blogId }, '', `/blog/${blogId}`);
-            }
 
             showBlogPage();
             // Scroll to top of blog page

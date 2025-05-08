@@ -7,14 +7,14 @@
     @include('component.Benefits')
     @include('component.HomeConsultancy')
     @include('component.TopBlogs')
-    @include('component.Footer')
+    {{-- @include('component.Footer') --}}
     <script>
         (async () => {
             await Category();
 
            loadServices() ;
             $(".preloader").delay(70).fadeOut(100).addClass('loaded');
-           await TopCategory();
+        //    await TopCategory();
 
 
         })()

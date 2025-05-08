@@ -3,7 +3,7 @@
 @section('content')
     @include('component.MenuBar')
     @include('component.Consultancy')
-    @include('component.Footer')
+    {{-- @include('component.Footer') --}}
     <script>
         (async () => {
              await Category();

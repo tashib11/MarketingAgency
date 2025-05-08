@@ -21,7 +21,9 @@
 
             <div class="mb-3">
                 <label class="form-label fw-semibold">Content (text & images)</label>
-                <textarea name="content" id="tiny-editor" class="form-control" rows="10">{{ $blog->content }}</textarea>
+                <textarea name="content" id="tiny-editor" class="form-control" rows="10">
+{!! old('content', str_replace('src="storage/', 'src="' . asset('storage/') . '/', $blog->content)) !!}
+                </textarea>
             </div>
 
             <div class="text-end">
@@ -48,7 +50,6 @@ tinymce.init({
     image_title: true,
     images_upload_url: '/api/blog-upload-image',
     file_picker_types: 'image',
-    inline_boundaries: false,
 
     formats: {
         bold: { inline: 'strong', remove: 'all' },

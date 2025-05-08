@@ -2,7 +2,7 @@
 @section('content')
     @include('component.MenuBar')
     @include('component.ContentBlog')
-    @include('component.Footer')
+    {{-- @include('component.Footer') --}}
 
     <script>
         (async () => {
