@@ -22,10 +22,8 @@
             <div class="mb-3">
                 <label class="form-label fw-semibold">Content (text & images)</label>
                 <textarea name="content" id="tiny-editor" class="form-control" rows="10">
-                    {{ old('content', str_replace('src="uploads/', 'src="' . asset('uploads/') . '/', $blog->content)) }}
+{!! old('content', str_replace('src="storage/', 'src="' . asset('storage/') . '/', $blog->content)) !!}
                 </textarea>
-
-
             </div>
 
             <div class="text-end">
@@ -52,7 +50,6 @@ tinymce.init({
     image_title: true,
     images_upload_url: '/api/blog-upload-image',
     file_picker_types: 'image',
-    inline_boundaries: false,
 
     formats: {
         bold: { inline: 'strong', remove: 'all' },
@@ -124,18 +121,6 @@ tinymce.init({
             }
         });
     }
-});
-
-// Convert image URLs back to relative before submitting the form
-document.getElementById('blog-form').addEventListener('submit', function (e) {
-    const editor = tinymce.get('tiny-editor');
-    let content = editor.getContent();
-
-    const fullPath = "{{ asset('uploads/') }}/";
-    content = content.replaceAll('src="' + fullPath, 'src="{{ asset('storage/uploads/') }}/');
-
-
-    editor.setContent(content); // Update editor content with relative paths
 });
 </script>
 
