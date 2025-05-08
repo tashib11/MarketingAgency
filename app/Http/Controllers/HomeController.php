@@ -10,9 +10,5 @@ class HomeController extends Controller
     {
         return view('pages.home-page');
     }
-    public function getHomeSlides()
-    {
-        $slides = HomeSlide::all();
-        return response()->json($slides);
-    }
+
 }

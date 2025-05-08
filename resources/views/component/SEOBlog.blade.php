@@ -128,7 +128,9 @@
 /* Small screen adjustments */
 @media (max-width: 768px) {
     .btn-submit {
-        width: 100%;
+        width: auto;
+        font-size: 16px;
+        padding: 10px 20px;
     }
 }
 
@@ -280,7 +282,14 @@
                 </div>
 
                 <div class="col-12 text-center">
-                    <button type="button" class="btn-submit" onclick="submitForm()">Submit</button>
+                    <div class="col-12 text-center d-flex justify-content-center align-items-center gap-3">
+                        <button type="button" class="btn-submit d-flex justify-content-center align-items-center gap-2" id="submitBtn" onclick="submitForm()">
+                            <span id="spinner" class="spinner-border spinner-border-sm text-light" role="status" style="display: none;"></span>
+                            <span id="submitText">Submit</span>
+                        </button>
+
+                        <span id="successMsg" class="fw-semibold" style="display: none;"></span>
+                    </div>
                 </div>
             </div>
         </form>
@@ -293,50 +302,67 @@
         let emailError = document.getElementById("emailError");
 
         let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        emailError.style.display = email.match(emailPattern) ? "none" : "block";
+    }
 
-        if (!email.match(emailPattern)) {
-            emailError.style.display = "block";
+    function showInlineMessage(message, isSuccess = true) {
+    const successMsg = document.getElementById("successMsg");
+    successMsg.textContent = message;
+    successMsg.style.display = "inline";
+    successMsg.className = isSuccess
+        ? "text-success fw-semibold ms-3"
+        : "text-danger fw-semibold ms-3";
+
+    setTimeout(() => {
+        successMsg.style.display = "none";
+    }, 1000);
+}
+
+async function submitForm() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const contact = document.getElementById("contact").value.trim();
+    const technology = document.getElementById("website").value.trim();
+    const exampleWebsite = document.getElementById("exampleWebsite").value.trim();
+
+    const spinner = document.getElementById("spinner");
+    const submitBtn = document.getElementById("submitBtn");
+
+    // Show spinner
+    spinner.style.display = "inline-block";
+
+    // Validate fields
+    const isEmailInvalid = document.getElementById("emailError").style.display !== "none";
+    if (
+        name === "" || email === "" || contact === "" || technology === "" ||
+        exampleWebsite === "" || isEmailInvalid
+    ) {
+        showInlineMessage("❌ Please fill out all required fields!", false);
+        spinner.style.display = "none";
+        return;
+    }
+
+    try {
+        const response = await axios.post('/seo-booking', {
+            name,
+            email,
+            contact,
+            technology: technology,
+            website_link: exampleWebsite,
+        });
+
+        if (response.data.success) {
+            document.getElementById("quotationForm").reset();
+            showInlineMessage("✅ Sent!", true);
         } else {
-            emailError.style.display = "none";
+            showInlineMessage("❌ Something went wrong!", false);
         }
+    } catch (error) {
+        showInlineMessage("❌ Failed to submit the form!", false);
+        console.error(error);
+    } finally {
+        spinner.style.display = "none";
     }
+}
 
-    async function submitForm() {
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let contact = document.getElementById("contact").value.trim();
-        let technology = document.getElementById("website").value.trim();
-        let websiteLink = document.getElementById("exampleWebsite").value.trim();
-        let emailError = document.getElementById("emailError").style.display;
-
-        if (name === "" || email === "" || contact === "" || technology === "" ||
-        websiteLink === "") {
-            alert("❌ Please fill out all required fields!");
-            return;
-        }
-
-        if (emailError === "block") {
-            alert("❌ Please enter a valid email address!");
-            return;
-        }
-
-        try {
-            let response = await axios.post('/seo-booking', {
-                name: name,
-                email: email,
-                contact: contact,
-                technology: technology,
-                website_link: websiteLink,
-            });
-
-            if (response.data.success) {
-                alert("✅ Form submitted successfully!");
-                document.getElementById("quotationForm").reset();
-            }
-        } catch (error) {
-            alert("❌ Failed to submit the form. Please try again!");
-            console.error(error);
-        }
-    }
-    </script>
-
+</script>
