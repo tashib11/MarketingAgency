@@ -40,31 +40,31 @@
 
 
 </head>
-<body>
-    <div id="toast-container" aria-live="polite" aria-atomic="true" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+<body class="d-flex flex-column min-vh-100">
+    <div id="toast-container" aria-live="polite" aria-atomic="true" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <span></span><span></span><span></span>
+        </div>
     </div>
 
-<div class="preloader">
-    <div class="lds-ellipsis">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
+    <!-- Flex grows for content -->
+    <main class="flex-grow-1">
+        @yield('content')
+    </main>
 
-<div>
-    @yield('content')
-</div>
-<script src="{{asset('assets/js/scripts.js')}}"></script>
-<script src="{{asset('assets/js/magnific-popup.min.js')}}"></script>
-<script src="{{asset('assets/js/popper.min.js')}}"></script>
-<script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
+    <!-- Sticky Footer (already included via component) -->
+    @include('component.Footer')
 
- <!-- Bootstrap JS and dependencies -->
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <!-- Scripts -->
+    <script src="{{asset('assets/js/scripts.js')}}"></script>
+    <script src="{{asset('assets/js/magnific-popup.min.js')}}"></script>
+    <script src="{{asset('assets/js/popper.min.js')}}"></script>
+    <script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
+
 </html>

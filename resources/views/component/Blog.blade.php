@@ -16,7 +16,6 @@
     </div>
 </div>
 <!-- MAIN BLOG SECTION -->
-<!-- MAIN BLOG SECTION -->
 <div class="container mt-4">
     <div class="row">
         <!-- Sidebar (Recent Posts) - First Column -->
@@ -31,7 +30,7 @@
         <div class="col-md-8">
             <div id="blog-details" class="card border-0">
                 <div class="card border-0 shadow-sm rounded-4 p-4 mb-4">
-                    <h4 id="blog-title" class="blog-title mb-3"></h4>
+                    <h1 id="blog-title" class="blog-title mb-3"></h1>
                 </div>
 
                 <div id="blog-content">
@@ -144,24 +143,33 @@
         const blogListEl = document.getElementById('blog-list');
 
         function renderBlog(id) {
-            blogContentEl.innerHTML = `
-                <div class="text-center py-4">
-                    <div class="spinner-border text-primary" role="status"></div>
-                </div>
-            `;
+    blogContentEl.innerHTML = `
+        <div class="text-center py-4">
+            <div class="spinner-border text-primary" role="status"></div>
+        </div>
+    `;
 
-            updateSidebar(id);
+    updateSidebar(id);
 
-            axios.get(`/api/blog/${id}`).then(res => {
-                const blog = res.data.blog;
-                blogTitleEl.textContent = blog.title;
+    axios.get(`/api/blog/${id}`).then(res => {
+        const blog = res.data.blog;
+        blogTitleEl.textContent = blog.title;
 
-                // Directly inject TinyMCE HTML
-                blogContentEl.innerHTML = `<div class="blog-html-content">${blog.content}</div>`;
+        // Inject HTML
+        blogContentEl.innerHTML = `<div class="blog-html-content">${blog.content}</div>`;
 
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
+        // ✅ Fix image paths
+        document.querySelectorAll('#blog-content img').forEach(img => {
+            const src = img.getAttribute('src');
+            if (src && !src.startsWith('http') && !src.startsWith('/')) {
+                img.setAttribute('src', '/' + src);
+            }
+        });
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
 
         function updateSidebar(currentId) {
             axios.get('/api/blog-recent').then(res => {
@@ -179,9 +187,13 @@
 
                 document.querySelectorAll('#blog-list a').forEach(link => {
                     link.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const id = this.getAttribute('data-id');
-                        renderBlog(id);
+                              e.preventDefault();
+                                  const id = this.getAttribute('data-id');
+                                  window.history.pushState({ blogId: id }, '', `/blog/${id}`);
+                         // Render content
+                                     renderBlog(id);
+
+
                     });
                 });
             });
