@@ -99,13 +99,101 @@
             </div>
         </div>
 
+
+
+
         <div class="row" id="ServiceContainer">
-            <!-- Dynamic cards will be loaded here -->
+            <!--  cards will be loaded here -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <a href="{{ url('/digital-marketing') }}" class="text-decoration-none">
+                    <div class="service-card-wrapper">
+                        <div class="card service-card p-4">
+                            <div class="icon-circle">
+                                <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                            </div>
+                            <h3 class="card-title text-dark">Digital Marketing</h3>
+                            <p class="card-text text-muted">Struggling to get leads and sales? Our result-driven digital marketing services help businesses boost online visibility, attract the right audience, and convert visitors into loyal customers.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <a href="{{ url('/web-development') }}" class="text-decoration-none">
+                    <div class="service-card-wrapper">
+                        <div class="card service-card p-4">
+                            <div class="icon-circle">
+                                <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                            </div>
+                            <h5 class="card-title text-dark">Web Design</h5>
+                            <p class="card-text text-muted">Struggling to get leads and sales? Our result-driven digital marketing services help businesses boost online visibility, attract the right audience, and convert visitors into loyal customers.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <a href="{{ url('/seo') }}" class="text-decoration-none">
+                    <div class="service-card-wrapper">
+                        <div class="card service-card p-4">
+                            <div class="icon-circle">
+                                <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                            </div>
+                            <h5 class="card-title text-dark">SEO</h5>
+                            <p class="card-text text-muted">Struggling to get leads and sales? Our result-driven digital marketing services help businesses boost online visibility, attract the right audience, and convert visitors into loyal customers.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <a href="{{ url('/content-solution') }}" class="text-decoration-none">
+                    <div class="service-card-wrapper">
+                        <div class="card service-card p-4">
+                            <div class="icon-circle">
+                                <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                            </div>
+                            <h5 class="card-title text-dark">Content Solution</h5>
+                            <p class="card-text text-muted">Struggling to get leads and sales? Our result-driven digital marketing services help businesses boost online visibility, attract the right audience, and convert visitors into loyal customers.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <a href="{{ url('/marketing-consultancy') }}" class="text-decoration-none">
+                    <div class="service-card-wrapper">
+                        <div class="card service-card p-4">
+                            <div class="icon-circle">
+                                <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                            </div>
+                            <h5 class="card-title text-dark">Marketing Consultancy</h5>
+                            <p class="card-text text-muted">Struggling to get leads and sales? Our result-driven digital marketing services help businesses boost online visibility, attract the right audience, and convert visitors into loyal customers.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <a href="{{ url('/creative-solution') }}" class="text-decoration-none">
+                    <div class="service-card-wrapper">
+                        <div class="card service-card p-4">
+                            <div class="icon-circle">
+                                <img src="{{ asset('assets/images/idsb.svg') }}" alt="Service Logo" class="img-fluid">
+                            </div>
+                            <h5 class="card-title text-dark">Creative Solution</h5>
+                            <p class="card-text text-muted">Struggling to get leads and sales? Our result-driven digital marketing services help businesses boost online visibility, attract the right audience, and convert visitors into loyal customers.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
         </div>
     </div>
 </div>
 </div>
-<script>
+{{-- <script>
     function showServiceSkeleton(count = 3) {
         let serviceContainer = document.getElementById("ServiceContainer");
         let skeleton = "";
@@ -156,5 +244,5 @@
             document.getElementById("ServiceContainer").innerHTML = `<p class="text-danger">Failed to load services.</p>`;
         }
     }
-    </script>
+    </script> --}}
 

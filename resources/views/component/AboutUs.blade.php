@@ -28,7 +28,7 @@
 <div class="container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ secure_asset('assets/images/emon2.jpg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ asset('assets/images/emon2.jpg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <h1 class="fw-bold blog-title">Our Story</h1>
@@ -57,7 +57,7 @@
             </p>
         </div>
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ secure_asset('assets/images/emon2.jpg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ asset('assets/images/emon2.jpg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
     </div>
 </div>
@@ -67,7 +67,7 @@
 <div class="container py-5">
     <div class="row align-items-center">
         <div class="col-lg-6 text-center mt-5">  <!-- Added mt-5 here -->
-            <img src="{{ secure_asset('assets/images/emon1.jpg') }}" alt="Web Development" class="img-fluid w-75">
+            <img src="{{ asset('assets/images/emon1.jpg') }}" alt="Web Development" class="img-fluid w-75">
         </div>
         <div class="col-lg-6 text-center text-lg-start">
             <p class="text-gray">

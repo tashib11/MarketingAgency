@@ -7,27 +7,13 @@
     $user = JWTToken::ReadToken($token);
 @endphp
 <header class="header_wrap fixed-top header_with_topbar">
-    {{-- <div class="top-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="d-flex align-items-center justify-content-center justify-content-md-start">
-                        <ul class="contact_detail text-center text-lg-start">
 
-                            <li><i class="ti-email"></i><span>info@idsb.com</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div> --}}
 
     <div class="bottom_header dark_skin main_menu_uppercase">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                     <img class="logo_dark" src="{{secure_asset('assets/images/idsb.svg')}}" alt="logo" />
+                     <img class="logo_dark" src="{{asset('assets/images/idsb.svg')}}" alt="logo" />
                     {{-- <h2>IDSB global</h2> --}}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,6 +28,12 @@
                             <div class="dropdown-menu">
                                 <ul id="CategoryItem">
                                     <!-- Categories will be populated here -->
+                                    <li><a class="dropdown-item nav-link nav_item category-item" href="{{ url('/digital-marketing') }}">Digital Marketing</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item category-item" href="{{ url('/web-development') }}">Web Design</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item category-item" href="{{ url('/seo') }}">SEO</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item category-item" href="{{ url('/content-solution') }}">Content Soltution</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item category-item" href="{{ url('/marketing-consultancy') }}">Marketing Consultancy</a></li>
+                                    <li><a class="dropdown-item nav-link nav_item category-item" href="{{ url('/creative-solution') }}">Creative Soltution</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -92,7 +84,7 @@
     </div>
 </header>
 
-<script>
+{{-- <script>
     document.addEventListener('DOMContentLoaded', function() {
         Category();
     });
@@ -108,7 +100,7 @@ let EachItem = `<li><a class="dropdown-item nav-link nav_item category-item" hre
             $("#CategoryItem").append(EachItem);
         });
     }
-</script>
+</script> --}}
 
 
 

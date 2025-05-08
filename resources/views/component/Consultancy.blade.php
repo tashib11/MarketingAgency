@@ -233,7 +233,7 @@ ul.text-muted li {
             <div class="service-card-wrapper">
                 <div class="card service-card">
                     <div class="icon-circle">
-                        <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
+                        <img src="{{ asset('assets/images/idsb.svg') }}" alt="Laravel Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">Evolve</h5>
                         <h3 class="card-title text-dark"> Your Leadership</h3>
@@ -250,7 +250,7 @@ ul.text-muted li {
             <div class="service-card-wrapper">
                 <div class="card service-card">
                     <div class="icon-circle">
-                        <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                        <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">Evolve</h5>
                         <h3 class="card-title text-dark">Your Business</h3>
@@ -266,7 +266,7 @@ ul.text-muted li {
             <div class="service-card-wrapper">
                 <div class="card service-card">
                     <div class="icon-circle">
-                        <img src="{{ secure_asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
+                        <img src="{{ asset('assets/images/idsb.svg') }}" alt="Web Hosting Logo" class="img-fluid">
                     </div>
                     <h5 class="card-title text-dark">Evolve</h5>
                     <h3 class="card-title text-dark"> Your Brand</h3>
@@ -286,7 +286,7 @@ ul.text-muted li {
         <div class="col-lg-6 text-center text-lg-start">
             <h2 class="fw-bold text-danger">We Provide Clients Modern Marketing Solution</h2>
             <div class="col-lg-12 text-center mt-5">  <!-- Added mt-5 here -->
-                <img src="{{ secure_asset('assets/images/consultancy.jpeg') }}" alt="Web Development" class="img-fluid w-75">
+                <img src="{{ asset('assets/images/consultancy.jpeg') }}" alt="Web Development" class="img-fluid w-75">
             </div>
 
         </div>

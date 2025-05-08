@@ -73,6 +73,13 @@ Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
 Route::post('/free-consultancy', [FreeConsultanyController::class, 'store']);
 
 
+Route::get('/digital-marketing', [ServiceController::class, 'DMPage']);
+Route::get('/web-development', [ServiceController::class, 'WebDevPage']);
+Route::get('/seo', [ServiceController::class, 'SEOPage']);
+Route::get('/content-solution', [ServiceController::class, 'ContentSolPage']);
+Route::get('/marketing-consultancy', [ServiceController::class, 'ConsultancyPage']);
+Route::get('/creative-solution', [ServiceController::class, 'CreativeSolPage']);
+
 
 
 
