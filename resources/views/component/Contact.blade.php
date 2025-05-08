@@ -126,14 +126,45 @@
 }
 
 /* Small screen adjustments */
+
+/* Responsive tweaks for smaller devices */
 @media (max-width: 768px) {
+    .quotation-form {
+        padding: 0 15px;
+    }
+
+    .quotation-form .form-control,
+    .quotation-form .form-select {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    .quotation-form textarea {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    .quotation-form label {
+        font-size: 15px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .quotation-form .row > div {
+        margin-bottom: 15px;
+    }
 
     .btn-submit {
         width: auto;
         font-size: 16px;
         padding: 10px 20px;
     }
-}
+
+    #successMsg {
+        font-size: 15px;
+    }}
+
 
 #myform {
     scroll-margin-top: 80px; /* Adjust this value as needed */
