@@ -26,4 +26,24 @@ class FreeConsultanyController extends Controller
         return response()->json(['success' => true, 'message' => 'Form submitted successfully!']);
     }
 
+    public function index()
+    {
+        $bookings = FreeConsultancy::latest()->get();
+        return view('admin.free-consultancy', compact('bookings'));
+    }
+
+    public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:pending,proceed,complete',
+        ]);
+
+
+        $booking = FreeConsultancy::findOrFail($id);
+        $booking->status = $request->status;
+        $booking->save();
+
+        return response()->json(['success' => true]);
+    }
+
 }

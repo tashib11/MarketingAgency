@@ -32,5 +32,23 @@ class ServiceBookingController extends Controller
         return response()->json(['success' => true, 'message' => 'Form submitted successfully!']);
     }
 
+    public function index()
+    {
+        $bookings = ServiceBooking::latest()->get();
+        return view('admin.service-booking', compact('bookings'));
+    }
 
+    public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:pending,proceed,complete',
+        ]);
+
+
+        $booking = ServiceBooking::findOrFail($id);
+        $booking->status = $request->status;
+        $booking->save();
+
+        return response()->json(['success' => true]);
+    }
 }

@@ -67,5 +67,22 @@ class UserController extends Controller
     $data['users'] = $users;
         return view('admin.layouts.userlist', $data);
     }
+    public function edit($id) {
+        $user = User::findOrFail($id);
+        return view('admin.layouts.edit-user', compact('user'));
+    }
+
+    public function update(Request $request, $id) {
+        $request->validate([
+            'email' => 'required|email|unique:users,email,' . $id
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect()->route('user.list')->with('success', 'User email updated successfully!');
+    }
+
 }
 
