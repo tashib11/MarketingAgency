@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-4">
-    <h2>All SEO Bookings</h2>
+    <h2>All Free Consultancy lists</h2>
 
     <div class="mb-3">
         <input type="text" id="search-input" class="form-control" placeholder="Search name or email or contact...">
