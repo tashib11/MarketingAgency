@@ -29,4 +29,26 @@ class SeoBookingControler extends Controller
         return response()->json(['success' => true, 'message' => 'Form submitted successfully!']);
     }
 
+    public function index()
+    {
+        $bookings = SEOBooking::latest()->get();
+        return view('admin.seo-booking', compact('bookings'));
+    }
+
+    public function updateStatus(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|in:pending,proceed,complete',
+        ]);
+
+
+        $booking = SEOBooking::findOrFail($id);
+        $booking->status = $request->status;
+        $booking->save();
+
+        return response()->json(['success' => true]);
+    }
+
+
+
 }

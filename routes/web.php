@@ -50,7 +50,6 @@ Route::delete('/admin/blogs/{id}', [BlogController::class, 'destroy'])->name('ad
 
 Route::get('/about-us', [AboutController::class, 'AboutPage']);
 Route::get('/contact', [ContactController::class, 'ContactPage']);
-
 Route::get('/career', [CareerController::class, 'CareerPage']);
 
 // User Auth
@@ -58,21 +57,10 @@ Route::get('/UserLogin/{UserEmail}', [UserController::class, 'UserLogin']);
 Route::get('/VerifyLogin/{UserEmail}/{OTP}', [UserController::class, 'VerifyLogin']);
 Route::get('/logout',[UserController::class,'UserLogout']);
 
-//dashboard
-
-Route::get("/Dashboard",[DashboardController::class,'dashboardPage']);
-Route::get("/Dashboard/UserList",[UserController::class,'index'])->name('user.list');
 
 
-Route::get('/service-list', [ServiceController::class, 'getServices']);
-Route::get('/serviceById/{id}', [ServiceController::class, 'show']);
-Route::post('/service-booking', [ServiceBookingController::class, 'store']);
 
-Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
-
-Route::post('/free-consultancy', [FreeConsultanyController::class, 'store']);
-
-
+//service
 Route::get('/digital-marketing', [ServiceController::class, 'DMPage']);
 Route::get('/web-development', [ServiceController::class, 'WebDevPage']);
 Route::get('/seo', [ServiceController::class, 'SEOPage']);
@@ -80,7 +68,25 @@ Route::get('/content-solution', [ServiceController::class, 'ContentSolPage']);
 Route::get('/marketing-consultancy', [ServiceController::class, 'ConsultancyPage']);
 Route::get('/creative-solution', [ServiceController::class, 'CreativeSolPage']);
 
+//dashboard
 
+Route::get("/Dashboard",[DashboardController::class,'dashboardPage']);
+Route::get("/Dashboard/UserList",[UserController::class,'index'])->name('user.list');
+Route::get('/Dashboard/UserList/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+Route::post('/Dashboard/UserList/{id}/update', [UserController::class, 'update'])->name('user.update');
+
+//admin service
+Route::post('/service-booking', [ServiceBookingController::class, 'store']);
+Route::get('/admin/service-list', [ServiceBookingController::class, 'index'])->name('service.list');
+Route::post('/admin/service-update-status/{id}', [ServiceBookingController::class, 'updateStatus']);
+
+Route::post('/seo-booking', [SeoBookingControler::class, 'store']);
+Route::get('/admin/seo-list', [SeoBookingControler::class, 'index'])->name('seo.list');
+Route::post('/admin/seo-update-status/{id}', [SeoBookingControler::class, 'updateStatus']);
+
+Route::post('/free-consultancy', [FreeConsultanyController::class, 'store']);
+Route::get('/admin/free-consultancy-list', [FreeConsultanyController::class, 'index'])->name('consultancy.list');
+Route::post('/admin/consultancy-update-status/{id}', [FreeConsultanyController::class, 'updateStatus']);
 
 
 

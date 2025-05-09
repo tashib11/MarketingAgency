@@ -36,37 +36,32 @@
                 <table class="table table-hover text-nowrap">
                     <thead>
                         <tr>
-                            <th width="80">email</th>
-                            <th>role</th>
-
+                            <th width="80">Email</th>
+                            <th>Role</th>
+                            <th>Action</th> <!-- New column -->
                         </tr>
                     </thead>
                     <tbody>
-
                         @if ($users->isNotEmpty())
-
-                           @foreach ($users as $user )
-
-                        <tr>
-                            <td>{{  $user->email }}</td>
-
-                            <td>{{  $user->role }}</td>
-
-
-
-                        </tr>
-                           @endforeach
-
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->role }}</td>
+                                    <td>
+                                        <a href="{{ route('user.edit', $user->id) }}" class="btn btn-sm btn-primary">
+                                            Edit
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         @else
                             <tr>
-                                <td>Records not found</td>
+                                <td colspan="3">Records not found</td>
                             </tr>
                         @endif
-
-
-
                     </tbody>
                 </table>
+
             </div>
             <div class="card-footer clearfix">
                 {{ $users->links() }}

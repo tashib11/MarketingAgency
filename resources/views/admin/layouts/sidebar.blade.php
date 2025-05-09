@@ -14,56 +14,33 @@
 
                 <li class="nav-item">
                     <a href="{{ asset('/Dashboard') }}" class="nav-link">
-                        <i class="nav-icon fas fa-chart-pie"></i>
+                        <i class="nav-icon fas fa-file-alt"></i>
                         <p>Create Blog</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ asset('/admin/blogs') }}" class="nav-link">
-                        <i class="nav-icon fas fa-file-alt"></i>
+                        <i class="nav-icon fas fa-tag"></i>
                         <p>Blog List</p>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ asset('/Dashboard') }}" class="nav-link">
-                        <svg class="h-6 nav-icon w-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                          </svg>
-                        <p>Brands</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ asset('/Dashboard') }}" class="nav-link">
+                    <a href="{{ asset('/admin/seo-list') }}" class="nav-link">
                         <i class="nav-icon fas fa-tag"></i>
-                        <p>Products</p>
+                        <p>SEO List</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ asset('/Dashboard') }}" class="nav-link">
+                    <a href="{{ asset('/admin/service-list') }}" class="nav-link">
                         <i class="nav-icon fas fa-tag"></i>
-                        <p>Products details</p>
+                        <p>Service List</p>
                     </a>
                 </li>
-
                 <li class="nav-item">
-                    <a href="{{ asset('/Dashboard') }}" class="nav-link">
+                    <a href="{{ asset('/admin/free-consultancy-list') }}" class="nav-link">
                         <i class="nav-icon fas fa-tag"></i>
-                        <p>Products list</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="{{ asset('/Dashboard') }}" class="nav-link">
-                        <i class="nav-icon fas fa-tag"></i>
-                        <p>Update Product-Details</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="{{ asset('/Dashboard') }}" class="nav-link">
-                        <i class="nav-icon fas fa-shopping-bag"></i>
-                        <p>Invoices</p>
+                        <p>Consultancy List</p>
                     </a>
                 </li>
 

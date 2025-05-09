@@ -11,7 +11,8 @@ class DashboardController extends Controller
     {
 
         return view('admin.blog-create');
-        // return view('pages.home-page');
 
     }
+
+ 
 }
