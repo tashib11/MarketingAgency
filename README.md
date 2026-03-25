@@ -256,15 +256,6 @@ php artisan migrate
 
 The application includes a custom `ResponseHelper` class for consistent API responses. Use it to return standardized JSON responses with status codes and messages.
 
-## Payment Integration
-
-SSLCommerz payment gateway is integrated for handling payments. Configure your SSLCommerz credentials in `.env`:
-
-```env
-SSLCOMMERZ_API_KEY=your-api-key
-SSLCOMMERZ_STORE_ID=your-store-id
-```
-
 ## Contributing
 
 1. Fork the repository
@@ -273,21 +264,9 @@ SSLCOMMERZ_STORE_ID=your-store-id
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a Pull Request
 
-## License
 
-This project is licensed under the MIT License.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
